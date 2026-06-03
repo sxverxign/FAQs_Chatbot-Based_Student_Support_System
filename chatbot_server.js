@@ -114,6 +114,251 @@ function serveStaticFile(res, filePath) {
 }
 
 // ============================================================
+// GRATITUDE DETECTION — Phrases List
+// ============================================================
+// This list contains all the phrases and keywords that should
+// be recognised as expressions of gratitude or politeness.
+// When a student's message matches any of these, the chatbot
+// will respond with a warm acknowledgement instead of
+// searching the FAQ knowledge base.
+//
+// To add more phrases: simply add a new string to this array.
+// All comparisons are case-insensitive.
+// ============================================================
+const GRATITUDE_PHRASES = [
+  // Direct thank you variations
+  'thank you',
+  'thank you so much',
+  'thank you very much',
+  'thank you a lot',
+  'thank you for the info',
+  'thank you for the information',
+  'thank you for your help',
+  'thank you for helping me',
+  'thank you for the clarification',
+  'thank you for explaining',
+  'thank you for the answer',
+  'thank you for answering',
+  'thank you for the response',
+  'thank you for the update',
+  'thank you for the assistance',
+
+  // Shortened thank you
+  'thanks',
+  'thanks a lot',
+  'thanks so much',
+  'thanks very much',
+  'thanks for the info',
+  'thanks for the information',
+  'thanks for your help',
+  'thanks for helping',
+  'thanks for helping me',
+  'thanks for the clarification',
+  'thanks for explaining',
+  'thanks for the answer',
+  'thanks for answering',
+  'thanks for the response',
+  'thanks for the update',
+  'thanks for the assistance',
+  'thanks a bunch',
+  'thanks a ton',
+  'many thanks',
+
+  // Informal / slang variations
+  'thx',
+  'thnx',
+  'tnx',
+  'ty',
+  'tysm',
+  'tyvm',
+  'tq',
+  'tq so much',
+  'tq very much',
+
+  // Appreciative expressions
+  'i appreciate it',
+  'i appreciate that',
+  'i appreciate your help',
+  'i appreciate the help',
+  'i appreciate the info',
+  'i appreciate the information',
+  'i appreciate the clarification',
+  'much appreciated',
+  'greatly appreciated',
+  'deeply appreciated',
+  'this is helpful',
+  'this was helpful',
+  'very helpful',
+  'so helpful',
+  'that was helpful',
+  'that is helpful',
+  'that was very helpful',
+  'that is very helpful',
+  'this was very helpful',
+  'this is very helpful',
+  'quite helpful',
+
+  // Acknowledgement expressions
+  'noted',
+  'got it',
+  'got it thanks',
+  'got it thank you',
+  'understood',
+  'understood thank you',
+  'understood thanks',
+  'alright thanks',
+  'alright thank you',
+  'okay thanks',
+  'okay thank you',
+  'ok thanks',
+  'ok thank you',
+  'perfect thanks',
+  'perfect thank you',
+  'great thanks',
+  'great thank you',
+  'wonderful thanks',
+  'wonderful thank you',
+  'excellent thanks',
+  'excellent thank you',
+  'awesome thanks',
+  'awesome thank you',
+  'brilliant thanks',
+  'brilliant thank you',
+
+  // Complimentary expressions
+  'you are helpful',
+  'you are very helpful',
+  'you have been helpful',
+  'you have been very helpful',
+  'you are doing great',
+  'you are amazing',
+  'you are wonderful',
+  'this is amazing',
+  'this is great',
+  'this is wonderful',
+  'this is excellent',
+  'great job',
+  'good job',
+  'well done',
+  'keep it up',
+  'nice one',
+
+  // Nigerian / informal expressions commonly used by students
+  'e don do',
+  'na him be dat',
+  'you don help me',
+  'you don do am',
+  'i don get am',
+  'i don see am',
+  'i understand now',
+  'i get it now',
+  'i see now',
+  'now i understand',
+  'now i get it',
+  'now i see',
+  'clear',
+  'all clear',
+  'crystal clear',
+  'very clear',
+  'that is clear',
+  'that is very clear',
+  'that is quite clear',
+];
+
+// ============================================================
+// GRATITUDE DETECTION — Response Pool
+// ============================================================
+// The chatbot randomly selects one response from this list
+// each time it detects a gratitude message.
+// This makes the chatbot feel more natural and less repetitive.
+//
+// To add more responses: add a new string to this array.
+// ============================================================
+const GRATITUDE_RESPONSES = [
+  "You're welcome! 😊 If you have any other questions about your courses, grades, exams, or dress code, feel free to ask anytime.",
+  "Happy to help! 🎓 Don't hesitate to ask if there's anything else you'd like to know.",
+  "Glad I could assist! If you need any more information, I'm always here to help.",
+  "You're welcome! 😊 Feel free to come back anytime you have questions about your academic journey.",
+  "It's my pleasure! 🎓 Is there anything else you'd like to know about course registration, grading, exams, or dress code?",
+  "Anytime! That's what I'm here for. If you think of more questions later, don't hesitate to ask. 😊",
+  "You're welcome! Good luck with your studies! 📚 Feel free to ask if you need anything else.",
+  "Happy to be of help! 😊 Remember, I'm available anytime you have academic questions.",
+  "Glad that was helpful! 🎓 If you have more questions as the semester progresses, I'm always here.",
+  "You're very welcome! Best of luck with your academics. Feel free to return anytime you need assistance. 😊",
+  "No problem at all! 😊 That's exactly what I'm here for. Ask me anything else if you need to.",
+  "It was my pleasure helping you! 🎓 Don't forget — I'm available 24/7 for any academic questions you may have.",
+  "Glad I could clear that up! 😊 Feel free to ask if anything else comes to mind.",
+  "You're welcome! 🎓 Wishing you all the best in your studies. Come back anytime!",
+  "Happy to help! Academic success starts with being informed. 📚 Keep asking questions whenever you need to!",
+];
+
+// ============================================================
+// GRATITUDE DETECTION — Main Function
+// ============================================================
+// Checks whether the user's message is a gratitude expression.
+// Returns true if it matches, false if it does not.
+//
+// How it works:
+//   1. Cleans the input (lowercase, remove punctuation, trim)
+//   2. Checks for an exact match against GRATITUDE_PHRASES
+//   3. Checks if the cleaned input STARTS WITH a gratitude phrase
+//      (handles cases like "thanks a lot for that explanation")
+//   4. Checks if the cleaned input CONTAINS a short gratitude
+//      keyword like "thanks" or "thank you"
+// ============================================================
+function isGratitude(userMessage) {
+  if (!userMessage || typeof userMessage !== 'string') return false;
+
+  // Clean the input — lowercase and remove punctuation
+  const cleaned = userMessage
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .trim();
+
+  // Guard against empty string after cleaning
+  if (!cleaned) return false;
+
+  // Check 1 — Exact match against any phrase in the list
+  if (GRATITUDE_PHRASES.includes(cleaned)) {
+    return true;
+  }
+
+  // Check 2 — The message STARTS WITH a gratitude phrase
+  // Handles: "thanks for that, very useful" or "thank you so much!"
+  const startsWithGratitude = GRATITUDE_PHRASES.some(phrase =>
+    cleaned.startsWith(phrase)
+  );
+  if (startsWithGratitude) return true;
+
+  // Check 3 — The message CONTAINS a core short gratitude keyword
+  // These are kept short and specific to avoid false positives
+  const coreKeywords = [
+    'thank you',
+    'thanks',
+    'appreciate',
+    'helpful',
+    'noted',
+    'understood',
+  ];
+
+  const containsGratitude = coreKeywords.some(keyword =>
+    cleaned.includes(keyword)
+  );
+  if (containsGratitude) return true;
+
+  return false;
+}
+
+// ============================================================
+// GRATITUDE DETECTION — Picks a Random Response
+// ============================================================
+
+function getGratitudeResponse() {
+  const randomIndex = Math.floor(Math.random() * GRATITUDE_RESPONSES.length);
+  return GRATITUDE_RESPONSES[randomIndex];
+}
+
+// ============================================================
 // NLP CORE — Text preprocessing
 // Cleans and tokenises a raw string for matching
 // ============================================================
@@ -438,7 +683,7 @@ function handleChat(req, res, body) {
     });
   }
 
-  const cleanQuestion = question.trim();
+   const cleanQuestion = question.trim();
 
   // Guard against very long inputs (spam protection)
   if (cleanQuestion.length > 500) {
@@ -449,6 +694,21 @@ function handleChat(req, res, body) {
   }
 
   console.log(`[CHAT] User "${username || 'unknown'}" asked: "${cleanQuestion}"`);
+
+  // ---- Gratitude Detection --------------------------------
+  // Checks if the student is expressing gratitude BEFORE
+  // running the FAQ search.
+  // --------------------------------------------------------
+  if (isGratitude(cleanQuestion)) {
+    console.log(`[CHAT] Gratitude detected — sending acknowledgement response`);
+    return sendJSON(res, 200, {
+      success   : true,
+      answer    : getGratitudeResponse(),
+      matched   : null,
+      confidence: 100,
+      type      : 'gratitude',
+    });
+  }
 
   // Load FAQ data
   const faqData = readJSONFile(CONFIG.FAQ_FILE, []);
