@@ -21,7 +21,7 @@
 // ============================================================
 // SERVER URL — change this if your server runs on a different port
 // ============================================================
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = window.location.origin;
 
 // ============================================================
 // APP STATE — single object holds all runtime state

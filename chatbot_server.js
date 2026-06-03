@@ -20,13 +20,12 @@ const url  = require('url');        // URL parsing
 // CONFIGURATION — change these values to fit your setup
 // ============================================================
 const CONFIG = {
-  PORT           : 3000,
-  HOST           : 'localhost',
+  PORT           : process.env.PORT || 3000,
+  HOST           : '0.0.0.0',
   FAQ_FILE       : path.join(__dirname, 'chatbot_faq.json'),
   HISTORY_FILE   : path.join(__dirname, 'chat_history.json'),
   USERS_FILE     : path.join(__dirname, 'users.json'),
-  STATIC_DIR     : __dirname,          // serve files from project root
-  // Minimum keyword match score to accept a FAQ result (0–1 scale)
+  STATIC_DIR     : __dirname,
   MATCH_THRESHOLD: 0.15,
 };
 
@@ -766,7 +765,7 @@ server.listen(CONFIG.PORT, CONFIG.HOST, () => {
   console.log('╔══════════════════════════════════════════════════╗');
   console.log('║   Chatbot Student Support System — Server Ready  ║');
   console.log('╚══════════════════════════════════════════════════╝');
-  console.log(`   Copy URL to Browser    : http://${CONFIG.HOST}:${CONFIG.PORT}`);
+  console.log(`   Host   : ${CONFIG.HOST}`);
   console.log(`   Port   : ${CONFIG.PORT}`);
   console.log(`   FAQ    : ${CONFIG.FAQ_FILE}`);
   console.log(`   History: ${CONFIG.HISTORY_FILE}`);
