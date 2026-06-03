@@ -696,7 +696,7 @@ function handleChat(req, res, body) {
   console.log(`[CHAT] User "${username || 'unknown'}" asked: "${cleanQuestion}"`);
 
   // ---- Gratitude Detection --------------------------------
-  // Checks if the student is expressing gratitude BEFORE
+  // Checks if the student is expressing gratitude before
   // running the FAQ search.
   // --------------------------------------------------------
   if (isGratitude(cleanQuestion)) {
@@ -710,7 +710,7 @@ function handleChat(req, res, body) {
     });
   }
 
-  // Load FAQ data
+  // Loads FAQ data
   const faqData = readJSONFile(CONFIG.FAQ_FILE, []);
 
   if (!faqData.length) {
@@ -720,7 +720,7 @@ function handleChat(req, res, body) {
     });
   }
 
-  // Run NLP matching
+  // Runs NLP matching
   const result = findBestFAQMatch(cleanQuestion, faqData);
 
   if (result) {
@@ -731,12 +731,12 @@ function handleChat(req, res, body) {
       confidence: result.confidence,
     });
   } else {
-    // No match found — polite fallback message
+    // When no match is  found — polite fallback message
     sendJSON(res, 200, {
       success   : false,
       answer    : "I'm sorry, I couldn't find information related to your question. " +
                   "Please try rephrasing it, or ask about topics like course registration, " +
-                  "GPA calculation, school fees, dress code, or exam rules.",
+                  "GPA calculation or dress code policies",
       matched   : null,
       confidence: 0,
     });
