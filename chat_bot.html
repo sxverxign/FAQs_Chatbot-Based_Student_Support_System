@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUOYE Student Support FAQs Chatbot</title>
+
+  <link rel="stylesheet" href="chat_bot.css" />
+  <script src="chat_bot.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       LOGIN SCREEN
+  ============================================================ -->
+  <div id="loginScreen" class="login-screen">
+
+    <!-- Login card container -->
+    <div class="login-card">
+
+      <div class="login-branding">
+        <img src="assets/logo.png" alt="University Logo" class="login-logo" onerror="this.style.display='none'" />
+
+        <h1 class="login-university-name">Federal University, Oye-Ekiti</h1>
+        <p class="login-subtitle">Student Support FAQs Chatbot</p>
+      </div>
+
+      <!-- Login form — uses Fetch API, does NOT submit to server directly -->
+      <form id="loginForm" class="login-form" autocomplete="off">
+
+        <!-- Error message area -->
+        <div id="loginError" class="login-error" role="alert" aria-live="polite"></div>
+
+        <!-- Username -->
+        <div class="form-group">
+          <label for="usernameInput">Student Username</label>
+          <input type="text" id="usernameInput" name="username" placeholder="Enter your username" required
+            autocomplete="username" maxlength="50" />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required
+              autocomplete="current-password" maxlength="100" />
+            <!-- Toggle password visibility button -->
+            <button type="button" id="togglePassword" class="toggle-password" aria-label="Toggle password visibility">
+              👁
+            </button>
+          </div>
+        </div>
+
+        <!-- Login button -->
+        <button type="submit" id="loginBtn" class="btn-login">
+          <span id="loginBtnText">Login</span>
+          <span id="loginSpinner" class="spinner hidden"></span>
+        </button>
+
+        <!-- Demo credentials hint -->
+        <p class="demo-hint">
+          Demo: username <strong>student001</strong> / password <strong>pass1234</strong>
+        </p>
+
+      </form>
+    </div><!-- end login-card -->
+
+    <!-- Decorative background shapes -->
+    <div class="login-bg-shape login-bg-shape-1"></div>
+    <div class="login-bg-shape login-bg-shape-2"></div>
+
+  </div><!-- end loginScreen -->
+
+
+  <!-- ============================================================
+       MAIN CHAT APPLICATION
+  ============================================================ -->
+  <div id="chatApp" class="chat-app hidden">
+
+    <!-- ---- SIDEBAR ----------------------------------------- -->
+    <aside id="sidebar" class="sidebar" aria-label="Chat history sidebar">
+
+      <!-- Sidebar Header -->
+      <div class="sidebar-header">
+        <img src="assets/logo.png" alt="University Logo" class="sidebar-logo" onerror="this.style.display='none'" />
+
+        <span class="sidebar-uni-name">FUOYE FAQs Chatbot</span>
+
+        <!-- Mobile: close sidebar button -->
+        <button id="closeSidebarBtn" class="close-sidebar-btn" aria-label="Close sidebar">✕</button>
+      </div>
+
+      <!-- New Chat button -->
+      <button id="newChatBtn" class="btn-new-chat">
+        + &nbsp; New Chat
+      </button>
+
+      <!-- Sidebar search box -->
+      <div class="sidebar-search">
+        <input type="search" id="historySearch" placeholder="Search conversations..."
+          aria-label="Search chat history" />
+      </div>
+
+      <!-- Chat history list -->
+      <div class="history-section">
+        <p class="history-label">Recent Conversations</p>
+        <ul id="historyList" class="history-list" role="list">
+          <!-- History items are injected here by chat_bot.js -->
+          <li class="history-empty-msg">No conversations yet.</li>
+        </ul>
+      </div>
+
+      <!-- Sidebar footer — user info & logout button -->
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar" id="userAvatar">S</div>
+          <div class="user-details">
+            <span class="user-name" id="sidebarUserName">Student</span>
+            <span class="user-dept" id="sidebarUserDept">Department</span>
+          </div>
+        </div>
+        <button id="logoutBtn" class="btn-logout" title="Logout">
+          ⏻
+        </button>
+      </div>
+
+    </aside>
+
+
+    <!-- ---- MAIN CHAT AREA ----------------------------------- -->
+    <main class="chat-main" aria-label="Chat conversation area">
+
+      <!-- Top navigation bar -->
+      <header class="chat-header">
+
+        <!-- Mobile: hamburger button for sidebar-->
+        <button id="menuBtn" class="menu-btn" aria-label="Open sidebar menu">
+          ☰
+        </button>
+
+
+        <h2 class="chat-title" id="chatTitle">Student Support FAQs Chatbot</h2>
+
+        <!-- Header right-side actions -->
+        <div class="header-actions">
+          <button id="deleteChatBtn" class="btn-delete-chat" title="Delete this chat" aria-label="Delete current chat">
+            🗑
+          </button>
+          <button id="clearAllBtn" class="btn-clear-all" title="Clear all history" aria-label="Clear all chat history">
+            Clear All
+          </button>
+        </div>
+
+      </header>
+
+
+      <!-- Messages container — scrollable area -->
+      <div class="messages-container" id="messagesContainer" role="log" aria-live="polite">
+
+        <!-- Welcome message — shown when no messages exist -->
+        <div id="welcomeMessage" class="welcome-message">
+          <div class="welcome-icon">
+            <img src="assets/logo.png" alt="University Logo" class="sidebar-home" />
+          </div>
+          <h3>Welcome to the FUOYE Student Support FAQ Chatbot</h3>
+          <div class="welcome-body">
+            <p>I'm here to assist you with:</p>
+            <ul>
+              <li>Course Registration Information</li>
+              <li>GPA/CGPA &amp; Grading System Guidance</li>
+              <li>School Dress Code Policies</li>
+            </ul>
+            <p>You can ask questions like:</p>
+            <div class="example-questions">
+              <button class="example-btn" data-question="How do I register my courses?">
+                How do I register my courses?
+              </button>
+              <button class="example-btn" data-question="How is GPA calculated?">
+                How is GPA calculated?
+              </button>
+              <button class="example-btn" data-question="What is the grading system?">
+                What is the grading system?
+              </button>
+              <button class="example-btn" data-question="Are slippers allowed to class?">
+                Are slippers allowed to class?
+              </button>
+              <button class="example-btn" data-question="How do I check my results?">
+                How do I check my results?
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- refer to 'chat_bot.js' for chat bubbles -->
+
+      </div>
+
+
+      <!-- Input area at the bottom -->
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea id="messageInput" class="message-input" placeholder="Type your question here…" rows="1"
+            maxlength="500" aria-label="Message input"></textarea>
+          <button id="sendBtn" class="btn-send" aria-label="Send message" disabled>
+            ➤
+          </button>
+        </div>
+        <p class="input-footer">
+          Powered by FUOYE Support System — ANSWERS ARE FOR GUIDANCE ONLY.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Mobile sidebar overlay (clicking it closes the sidebar) -->
+    <div id="sidebarOverlay" class="sidebar-overlay hidden"></div>
+
+  </div><!-- end chatApp -->
+
+  <!-- Confirmation modal for destructive actions -->
+  <div id="confirmModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <h3 class="modal-title" id="modalTitle">Are you sure?</h3>
+      <p class="modal-body" id="modalBody">This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="btn-modal-cancel">Cancel</button>
+        <button id="modalConfirmBtn" class="btn-modal-confirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to our JavaScript file — placed at end of body for performance -->
+
+</body>
+
+</html>

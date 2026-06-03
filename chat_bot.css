@@ -1,0 +1,1234 @@
+:root {
+  /* --- Primary brand colour (university colour) --- */
+  --primary        : #0b5d3a;       /* Main accent — buttons, highlights */
+  --primary-dark   : #063a24;       /* Darker shade for hover states    */
+  --primary-light  : #168c58;       /* Very light shade for backgrounds */
+
+  /* --- Secondary / accent colour --- */
+  --secondary      : #b45309;       /* Secondary highlights             */
+
+  /* --- Neutral colours --- */
+  --bg-main        : #f7f8fc;       /* Page background (main content)   */
+  --bg-sidebar     : #063a24;       /* Sidebar background               */
+  --bg-sidebar-hover: #fd9f57;      /* Sidebar item hover               */
+  --bg-card        : #ffffff;       /* Cards, panels                    */
+  --bg-input       : #f3f4f6;       /* Input field background           */
+
+  /* --- Text colours --- */
+  --text-primary   : #111827;       /* Main body text                   */
+  --text-secondary : #6b7280;       /* Muted/secondary text             */
+  --text-sidebar   : #f5f5f5;       /* Sidebar text                     */
+  --text-sidebar-muted: #d97706;    /* Muted sidebar text               */
+  --text-on-primary: #ffffff;       /* Text on primary-coloured buttons */
+
+  /* --- Message bubble colours --- */
+  --bubble-user    : #d97706;       /* User message background          */
+  --bubble-user-text: #ffffff;      /* User message text                */
+  --bubble-bot     : #ffffff;       /* Bot message background           */
+  --bubble-bot-text: #111827;       /* Bot message text                 */
+  --bubble-shadow  : rgba(0,0,0,0.08);
+
+  /* --- Status colours --- */
+  --success        : #10b981;
+  --error          : #ef4444;
+  --warning        : #f59e0b;
+
+  /* --- Border & radius --- */
+  --border-color   : #b45309;
+  --radius-sm      : 8px;
+  --radius-md      : 12px;
+  --radius-lg      : 18px;
+  --radius-xl      : 24px;
+  --radius-pill    : 999px;
+
+  /* --- Shadows --- */
+  --shadow-sm      : 0 1px 3px rgba(0,0,0,0.10);
+  --shadow-md      : 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-lg      : 0 8px 30px rgba(0,0,0,0.16);
+
+  /* --- Layout dimensions --- */
+  --sidebar-width  : 280px;
+  --header-height  : 60px;
+  --input-area-h   : auto;
+
+  /* --- Typography --- */
+  --font-family    : 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-base : 15px;
+  --font-size-sm   : 13px;
+  --font-size-lg   : 17px;
+  --font-size-xl   : 20px;
+  --line-height    : 1.6;
+
+  /* --- Transitions --- */
+  --transition     : 0.2s ease;
+  --transition-slow: 0.35s ease;
+}
+
+
+/* ============================================================
+   2. CSS RESET & BASE STYLES
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+}
+
+html {
+  height: 100%;
+  /* Smooth scroll for anchor links */
+  scroll-behavior: smooth;
+}
+
+body {
+  height      : 100%;
+  font-family : var(--font-family);
+  font-size   : var(--font-size-base);
+  color       : var(--text-primary);
+  background  : var(--bg-main);
+  line-height : var(--line-height);
+  overflow    : hidden;            /* Prevent body scroll; inner divs scroll */
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height   : auto;
+  display  : block;
+}
+
+button {
+  cursor     : pointer;
+  border     : none;
+  outline    : none;
+  font-family: inherit;
+  font-size  : inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size  : inherit;
+  outline    : none;
+  border     : none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color          : var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   3. TYPOGRAPHY
+   ============================================================ */
+h1 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 1.3rem; font-weight: 600; }
+h3 { font-size: 1.1rem; font-weight: 600; }
+h4 { font-size: 1rem;   font-weight: 600; }
+
+p  { margin-bottom: 0.5rem; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 600; }
+
+
+/* ============================================================
+   4. UTILITY CLASSES
+   ============================================================ */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position : absolute;
+  width    : 1px;
+  height   : 1px;
+  clip     : rect(0,0,0,0);
+  overflow : hidden;
+}
+
+/* Loading spinner */
+.spinner {
+  display      : inline-block;
+  width        : 16px;
+  height       : 16px;
+  border       : 2.5px solid rgba(255,255,255,0.4);
+  border-top   : 2.5px solid #ffffff;
+  border-radius: 50%;
+  animation    : spin 0.75s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Typing dots animation (loading indicator in chat) */
+.typing-dots {
+  display    : inline-flex;
+  align-items: center;
+  gap        : 4px;
+  padding    : 4px 2px;
+}
+
+.typing-dots span {
+  width        : 7px;
+  height       : 7px;
+  background   : var(--text-secondary);
+  border-radius: 50%;
+  animation    : typingBounce 1.2s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: 0s;    }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s;  }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s;  }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.5; }
+  30%            { transform: translateY(-6px); opacity: 1;   }
+}
+
+
+/* ============================================================
+   5a. LOGIN BACKGROUND
+   ============================================================ */
+.login-screen {
+  position       : relative;
+  min-height     : 100vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  /* Gradient background using primary brand colour */
+  background     : linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+  padding        : 20px;
+  overflow       : hidden;
+}
+
+/* Decorative blurred circles in the background */
+.login-bg-shape {
+  position     : absolute;
+  border-radius: 50%;
+  opacity      : 0.12;
+  pointer-events: none;
+}
+
+.login-bg-shape-1 {
+  width     : 500px;
+  height    : 500px;
+  background: #ffffff;
+  top       : -100px;
+  right     : -100px;
+}
+
+.login-bg-shape-2 {
+  width     : 350px;
+  height    : 350px;
+  background: #ffffff;
+  bottom    : -80px;
+  left      : -80px;
+}
+
+
+/* ============================================================
+   5b. LOGIN CARD
+   ============================================================ */
+.login-card {
+  position        : relative;
+  z-index         : 1;
+  width           : 100%;
+  max-width       : 420px;
+  background      : var(--bg-card);
+  border-radius   : var(--radius-xl);
+  box-shadow      : var(--shadow-lg);
+  padding         : 40px 36px;
+  animation       : fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+
+/* ============================================================
+   5c. LOGIN FORM
+   ============================================================ */
+.login-form {
+  display       : flex;
+  flex-direction: column;
+  gap           : 18px;
+}
+
+.form-group {
+  display       : flex;
+  flex-direction: column;
+  gap           : 6px;
+}
+
+.form-group label {
+  font-size  : var(--font-size-sm);
+  font-weight: 600;
+  color      : var(--text-primary);
+}
+
+.form-group input {
+  width        : 100%;
+  padding      : 12px 14px;
+  border       : 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background   : var(--bg-input);
+  color        : var(--text-primary);
+  font-size    : var(--font-size-base);
+  transition   : border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  box-shadow  : 0 0 0 3px rgba(26, 86, 219, 0.15);
+  background  : #fff;
+}
+
+/* Password field with eye-toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 46px;
+}
+
+.toggle-password {
+  position        : absolute;
+  right           : 12px;
+  top             : 50%;
+  transform       : translateY(-50%);
+  background      : none;
+  border          : none;
+  font-size       : 16px;
+  color           : var(--text-secondary);
+  padding         : 0;
+  line-height     : 1;
+  transition      : color var(--transition);
+}
+
+.toggle-password:hover { color: var(--primary); }
+
+/* Error message box */
+.login-error {
+  display      : none;             /* shown by JS when there is an error */
+  padding      : 10px 14px;
+  background   : #fef2f2;
+  border       : 1px solid #fca5a5;
+  border-radius: var(--radius-md);
+  color        : #dc2626;
+  font-size    : var(--font-size-sm);
+  line-height  : 1.4;
+}
+
+.login-error.visible {
+  display: block;
+  animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0);   }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px);  }
+}
+
+/* Login button */
+.btn-login {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  gap            : 8px;
+  padding        : 13px;
+  background     : var(--primary);
+  color          : var(--text-on-primary);
+  border-radius  : var(--radius-md);
+  font-size      : var(--font-size-base);
+  font-weight    : 600;
+  letter-spacing : 0.3px;
+  transition     : background var(--transition), transform var(--transition);
+}
+
+.btn-login:hover  { background: var(--primary-dark); transform: translateY(-1px); }
+.btn-login:active { transform: translateY(0); }
+.btn-login:disabled {
+  background: var(--text-secondary);
+  cursor    : not-allowed;
+  transform : none;
+}
+
+.demo-hint {
+  text-align: center;
+  font-size : var(--font-size-sm);
+  color     : var(--text-secondary);
+  margin-top: 4px;
+}
+
+
+/* ============================================================
+   5d. LOGIN BRANDING
+   ============================================================ */
+.login-branding {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  margin-bottom  : 28px;
+  text-align     : center;
+  gap            : 8px;
+}
+
+.login-logo {
+  width        : 80px;
+  height       : 80px;
+  object-fit   : contain;
+  border-radius: 50%;
+  border       : 3px solid var(--primary-light);
+  background   : var(--primary-light);
+  padding      : 4px;
+}
+
+.login-university-name {
+  font-size  : 1.3rem;
+  font-weight: 700;
+  color      : var(--text-primary);
+  margin-top : 4px;
+}
+
+.login-subtitle {
+  font-size : var(--font-size-sm);
+  color     : var(--text-secondary);
+  margin    : 0;
+}
+
+
+/* ============================================================
+   6. CHAT APPLICATION LAYOUT
+   ============================================================
+   Uses CSS Flexbox:
+     .chat-app = full-screen row container
+       .sidebar   = fixed-width left panel
+       .chat-main = flexible right content area
+   ============================================================ */
+.chat-app {
+  display   : flex;
+  height    : 100vh;
+  width     : 100vw;
+  overflow  : hidden;
+}
+
+
+/* ============================================================
+   7. SIDEBAR
+   ============================================================ */
+.sidebar {
+  width          : var(--sidebar-width);
+  min-width      : var(--sidebar-width);
+  height         : 100vh;
+  background     : var(--bg-sidebar);
+  display        : flex;
+  flex-direction : column;
+  overflow       : hidden;
+  transition     : transform var(--transition-slow);
+  z-index        : 100;
+}
+
+/* ---- 7a. Sidebar Header ---- */
+.sidebar-header {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  padding        : 16px 16px 12px;
+  border-bottom  : 1px solid rgba(255,255,255,0.07);
+  flex-shrink    : 0;
+}
+
+.sidebar-logo {
+  width        : 50px;
+  height       : 50px;
+  object-fit   : contain;
+  border-radius: 8px;
+  flex-shrink  : 0;
+  background   : rgba(255,255,255,0.1);
+  padding      : 3px;
+}
+.sidebar-home {
+  width: 80px;
+  height: 80px;
+}
+
+.sidebar-uni-name {
+  font-size  : var(--font-size-base);
+  font-weight: 700;
+  color      : #ffffff;
+  flex       : 1;
+}
+
+/* Close button — only visible on mobile */
+.close-sidebar-btn {
+  display   : none;            /* shown via media query */
+  background: none;
+  color     : var(--text-sidebar-muted);
+  font-size : 16px;
+  padding   : 4px;
+  transition: color var(--transition);
+}
+
+.close-sidebar-btn:hover { color: #ffffff; }
+
+/* ---- 7b. New Chat Button ---- */
+.btn-new-chat {
+  margin        : 12px;
+  padding       : 11px 16px;
+  background    : rgba(255,255,255,0.08);
+  color         : #ffffff;
+  border-radius : var(--radius-md);
+  font-size     : var(--font-size-sm);
+  font-weight   : 500;
+  text-align    : left;
+  transition    : background var(--transition);
+  border        : 1px solid rgba(255,255,255,0.12);
+  flex-shrink   : 0;
+}
+
+.btn-new-chat:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+/* Search box inside sidebar */
+.sidebar-search {
+  padding    : 0 12px 10px;
+  flex-shrink: 0;
+}
+
+.sidebar-search input {
+  width        : 100%;
+  padding      : 8px 12px;
+  background   : rgba(255,255,255,0.08);
+  color        : #ffffff;
+  border       : 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  font-size    : var(--font-size-sm);
+  transition   : background var(--transition), border-color var(--transition);
+}
+
+.sidebar-search input::placeholder { color: var(--text-sidebar-muted); }
+.sidebar-search input:focus {
+  background  : rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* ---- 7c. History List ---- */
+.history-section {
+  flex    : 1;
+  overflow: hidden auto;     /* scrollable list */
+  padding : 0 8px;
+}
+
+/* Custom scrollbar for sidebar */
+.history-section::-webkit-scrollbar        { width: 4px; }
+.history-section::-webkit-scrollbar-track  { background: transparent; }
+.history-section::-webkit-scrollbar-thumb  { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+.history-label {
+  font-size    : 11px;
+  font-weight  : 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color        : var(--border-color);
+  padding      : 8px 8px 4px;
+  margin       : 0;
+}
+
+.history-list {
+  display       : flex;
+  flex-direction: column;
+  gap           : 2px;
+}
+
+/* Individual history item */
+.history-item {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  gap            : 6px;
+  padding        : 9px 10px;
+  border-radius  : var(--radius-sm);
+  cursor         : pointer;
+  transition     : background var(--transition);
+}
+
+.history-item:hover {
+  background: var(--border-color);
+}
+
+.history-item.active {
+  background: var(--border-color);
+}
+
+.history-item-title {
+  flex         : 1;
+  font-size    : var(--font-size-sm);
+  color        : var(--text-sidebar);
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+  line-height  : 1.3;
+}
+
+.history-item-time {
+  font-size  : 11px;
+  color      : var(--text-sidebar-muted);
+  flex-shrink: 0;
+}
+
+/* Delete button on each history item */
+.history-delete-btn {
+  background  : none;
+  color       : transparent;          /* hidden until hover */
+  font-size   : 13px;
+  padding     : 2px 4px;
+  border-radius: 4px;
+  transition  : all var(--transition);
+  flex-shrink : 0;
+}
+
+.history-item:hover .history-delete-btn {
+  color: #f87171;
+}
+
+.history-delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Empty state message */
+.history-empty-msg {
+  font-size : var(--font-size-sm);
+  color     : var(--text-sidebar-muted);
+  text-align: center;
+  padding   : 20px 10px;
+  font-style: italic;
+}
+
+/* ---- 7d. Sidebar Footer ---- */
+.sidebar-footer {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  padding        : 12px;
+  border-top     : 1px solid rgba(255,255,255,0.07);
+  flex-shrink    : 0;
+}
+
+.user-info {
+  display    : flex;
+  align-items: center;
+  gap        : 10px;
+  flex       : 1;
+  overflow   : hidden;
+}
+
+/* Circular user avatar with initial letter */
+.user-avatar {
+  width          : 36px;
+  height         : 36px;
+  background     : var(--primary);
+  color          : #ffffff;
+  border-radius  : 50%;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  font-weight    : 700;
+  font-size      : var(--font-size-base);
+  flex-shrink    : 0;
+}
+
+.user-details {
+  display       : flex;
+  flex-direction: column;
+  overflow      : hidden;
+}
+
+.user-name {
+  font-size    : var(--font-size-sm);
+  font-weight  : 600;
+  color        : var(--text-sidebar);
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
+
+.user-dept {
+  font-size    : 11px;
+  color        : var(--text-sidebar-muted);
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
+
+/* Logout button */
+.btn-logout {
+  background   : none;
+  color        : var(--text-sidebar-muted);
+  font-size    : 18px;
+  padding      : 6px;
+  border-radius: 6px;
+  transition   : all var(--transition);
+  flex-shrink  : 0;
+}
+
+.btn-logout:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color     : #f87171;
+}
+
+
+/* ============================================================
+   8. CHAT MAIN AREA
+   ============================================================ */
+.chat-main {
+  flex          : 1;
+  display       : flex;
+  flex-direction: column;
+  height        : 100vh;
+  overflow      : hidden;
+  background    : var(--bg-main);
+}
+
+
+/* ---- 8a. Chat Header ---- */
+.chat-header {
+  display        : flex;
+  align-items    : center;
+  gap            : 12px;
+  padding        : 0 20px;
+  height         : var(--header-height);
+  background     : var(--bg-card);
+  border-bottom  : 1px solid var(--border-color);
+  box-shadow     : var(--shadow-sm);
+  flex-shrink    : 0;
+  z-index        : 10;
+}
+
+.menu-btn {
+  display   : none;            /* shown on mobile via media query */
+  background: none;
+  color     : var(--text-secondary);
+  font-size : 20px;
+  padding   : 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.menu-btn:hover { background: var(--bg-input); color: var(--text-primary); }
+
+.chat-title {
+  flex         : 1;
+  font-size    : var(--font-size-base);
+  font-weight  : 600;
+  color        : var(--text-primary);
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
+
+.header-actions {
+  display    : flex;
+  align-items: center;
+  gap        : 8px;
+  flex-shrink: 0;
+}
+
+.btn-delete-chat,
+.btn-clear-all {
+  padding      : 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size    : var(--font-size-sm);
+  font-weight  : 500;
+  transition   : all var(--transition);
+}
+
+.btn-delete-chat {
+  background: none;
+  color     : var(--text-secondary);
+  font-size : 17px;
+}
+
+.btn-delete-chat:hover {
+  background: #fef2f2;
+  color     : var(--error);
+}
+
+.btn-clear-all {
+  background: none;
+  color     : var(--text-secondary);
+  border    : 1px solid var(--border-color);
+}
+
+.btn-clear-all:hover {
+  background: #fef2f2;
+  color     : var(--error);
+  border-color: #fca5a5;
+}
+
+
+/* ---- 8b. Messages Container ---- */
+.messages-container {
+  flex      : 1;
+  overflow-y: auto;
+  padding   : 24px 20px;
+  display   : flex;
+  flex-direction: column;
+  gap       : 16px;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for messages */
+.messages-container::-webkit-scrollbar        { width: 5px; }
+.messages-container::-webkit-scrollbar-track  { background: transparent; }
+.messages-container::-webkit-scrollbar-thumb  { background: #d1d5db; border-radius: 4px; }
+
+
+/* ---- 8c. Message Bubbles ---- */
+/* Wrapper for a single message row */
+.message-row {
+  display   : flex;
+  gap       : 10px;
+  max-width : 100%;
+  animation : messageSlideIn 0.25s ease;
+}
+
+@keyframes messageSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* User messages: align to the right */
+.message-row.user {
+  flex-direction: row-reverse;
+}
+
+/* Bot avatar circle */
+.message-avatar {
+  width          : 34px;
+  height         : 34px;
+  border-radius  : 50%;
+  background     : var(--primary-light);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  font-size      : 16px;
+  flex-shrink    : 0;
+  margin-top     : 2px;
+}
+
+.message-row.user .message-avatar {
+  background: var(--primary);
+  color     : #ffffff;
+  font-size : var(--font-size-sm);
+  font-weight: 700;
+}
+
+/* The bubble itself */
+.message-bubble {
+  max-width    : 72%;
+  padding      : 12px 16px;
+  border-radius: var(--radius-lg);
+  box-shadow   : var(--shadow-sm);
+  font-size    : var(--font-size-base);
+  line-height  : 1.6;
+  word-break   : break-word;
+}
+
+/* User bubble (right side) */
+.message-row.user .message-bubble {
+  background   : var(--bubble-user);
+  color        : var(--bubble-user-text);
+  border-bottom-right-radius: 4px;
+}
+
+/* Bot bubble (left side) */
+.message-row.bot .message-bubble {
+  background   : var(--bubble-bot);
+  color        : var(--bubble-bot-text);
+  border-bottom-left-radius: 4px;
+  border       : 1px solid var(--border-color);
+}
+
+/* Timestamp shown below each bubble */
+.message-time {
+  font-size  : 11px;
+  color      : var(--text-secondary);
+  margin-top : 4px;
+  text-align : right;
+}
+
+.message-row.bot .message-time {
+  text-align: left;
+}
+
+/* Matched FAQ indicator (shown inside bot bubble) */
+.matched-label {
+  display      : inline-block;
+  font-size    : 11px;
+  color        : var(--text-secondary);
+  background   : var(--bg-input);
+  border-radius: var(--radius-pill);
+  padding      : 2px 8px;
+  margin-top   : 8px;
+}
+
+/* Error / warning bubble */
+.message-row.error .message-bubble {
+  background: #fff7ed;
+  border    : 1px solid #fed7aa;
+  color     : #9a3412;
+}
+
+
+/* ---- 8d. Welcome Message ---- */
+.welcome-message {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  text-align    : center;
+  padding       : 30px 20px;
+  max-width     : 600px;
+  margin        : auto;
+  gap           : 12px;
+}
+
+
+.welcome-icon {
+  font-size: 54px;
+  line-height: 1;
+}
+
+.welcome-message h3 {
+  font-size  : 1.4rem;
+  font-weight: 700;
+  color      : var(--text-primary);
+}
+
+.welcome-body {
+  text-align : left;
+  width      : 100%;
+  background : var(--bg-card);
+  border     : 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding    : 20px 24px;
+  box-shadow : var(--shadow-sm);
+}
+
+.welcome-body ul {
+  margin     : 8px 0 16px 0;
+  display    : flex;
+  flex-direction: column;
+  gap        : 6px;
+}
+
+.welcome-body ul li {
+  font-size: var(--font-size-base);
+  color    : var(--text-primary);
+}
+
+/* Clickable example question chips */
+.example-questions {
+  display        : flex;
+  flex-wrap      : wrap;
+  gap            : 8px;
+  margin-top     : 10px;
+}
+
+.example-btn {
+  padding      : 8px 14px;
+  background   : var(--primary-light);
+  color        : var(--text-on-primary);
+  border-radius: var(--radius-pill);
+  font-size    : var(--font-size-sm);
+  font-weight  : 500;
+  border       : 1px solid rgba(26, 86, 219, 0.2);
+  transition   : all var(--transition);
+}
+
+.example-btn:hover {
+  background: var(--border-color);
+  color     : #ffffff;
+  transform : translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ---- 8e. Input Area ---- */
+.input-area {
+  flex-shrink   : 0;
+  padding       : 16px 20px;
+  background    : var(--bg-card);
+  border-top    : 1px solid var(--border-color);
+}
+
+.input-wrapper {
+  display      : flex;
+  align-items  : flex-end;
+  gap          : 10px;
+  background   : var(--bg-input);
+  border       : 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding      : 8px 8px 8px 16px;
+  transition   : border-color var(--transition), box-shadow var(--transition);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--border-color);
+  box-shadow  : 0 0 0 3px rgba(26, 86, 219, 0.1);
+  background  : #ffffff;
+}
+
+.message-input {
+  flex       : 1;
+  background : transparent;
+  color      : var(--text-primary);
+  resize     : none;
+  max-height : 140px;
+  overflow-y : auto;
+  line-height: var(--line-height);
+  padding    : 4px 0;
+}
+
+.message-input::placeholder { color: var(--text-secondary); }
+
+/* Send button */
+.btn-send {
+  width        : 40px;
+  height       : 40px;
+  background   : var(--border-color);
+  color        : #ffffff;
+  border-radius: var(--radius-md);
+  font-size    : 16px;
+  display      : flex;
+  align-items  : center;
+  justify-content: center;
+  flex-shrink  : 0;
+  transition   : background var(--transition), transform var(--transition);
+}
+
+.btn-send:hover:not(:disabled)  { background: var(--border-color); transform: scale(1.05); }
+.btn-send:active:not(:disabled) { transform: scale(0.97); }
+
+.btn-send:disabled {
+  background: #d1d5db;
+  cursor    : not-allowed;
+  transform : none;
+}
+
+.input-footer {
+  font-size : 11px;
+  color     : var(--text-secondary);
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+/* ============================================================
+   9. CONFIRMATION MODAL
+   ============================================================ */
+.modal-backdrop {
+  position       : fixed;
+  inset          : 0;
+  background     : rgba(0, 0, 0, 0.55);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  z-index        : 1000;
+  animation      : fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-box {
+  background   : var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding      : 28px 32px;
+  max-width    : 380px;
+  width        : 90%;
+  box-shadow   : var(--shadow-lg);
+  animation    : fadeInUp 0.25s ease;
+}
+
+.modal-title {
+  font-size  : 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  color      : var(--text-secondary);
+  font-size  : var(--font-size-sm);
+  margin-bottom: 22px;
+}
+
+.modal-actions {
+  display        : flex;
+  gap            : 10px;
+  justify-content: flex-end;
+}
+
+.btn-modal-cancel {
+  padding      : 9px 18px;
+  background   : var(--bg-input);
+  color        : var(--text-primary);
+  border-radius: var(--radius-md);
+  font-weight  : 500;
+  transition   : background var(--transition);
+}
+
+.btn-modal-cancel:hover { background: var(--border-color); }
+
+.btn-modal-confirm {
+  padding      : 9px 18px;
+  background   : var(--error);
+  color        : #ffffff;
+  border-radius: var(--radius-md);
+  font-weight  : 600;
+  transition   : background var(--transition);
+}
+
+.btn-modal-confirm:hover { background: #dc2626; }
+
+
+/* ============================================================
+   10. MOBILE OVERLAY (sidebar backdrop)
+   ============================================================ */
+.sidebar-overlay {
+  display   : none;
+  position  : fixed;
+  inset     : 0;
+  background: rgba(0,0,0,0.5);
+  z-index   : 99;
+}
+
+
+/* ============================================================
+   11. RESPONSIVE — TABLET & MOBILE
+   ============================================================ */
+
+/* --- Tablet: <= 900px --- */
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 260px;
+  }
+
+  .message-bubble {
+    max-width: 82%;
+  }
+
+  .welcome-message {
+    padding: 20px 10px;
+  }
+}
+
+/* --- Mobile: <= 640px --- */
+@media (max-width: 640px) {
+  /* On mobile, sidebar is hidden off-screen by default */
+  .sidebar {
+    position : fixed;
+    left     : 0;
+    top      : 0;
+    transform: translateX(-100%);    /* hidden off-screen */
+    height   : 100vh;
+    z-index  : 200;
+  }
+
+  /* When sidebar is open (class added by JS) */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Show overlay when sidebar is open */
+  .sidebar-overlay {
+    display: block;
+  }
+
+  /* Show hamburger menu and close buttons on mobile */
+  .menu-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  .close-sidebar-btn {
+    display: block;
+  }
+
+  /* Wider bubbles on small screens */
+  .message-bubble {
+    max-width: 90%;
+  }
+
+  /* Smaller header padding */
+  .chat-header {
+    padding: 0 12px;
+  }
+
+  /* Smaller message padding */
+  .messages-container {
+    padding: 16px 12px;
+    gap    : 12px;
+  }
+
+  /* Smaller input padding */
+  .input-area {
+    padding: 10px 12px;
+  }
+
+  /* Hide "Clear All" text on very small screens */
+  .btn-clear-all {
+    font-size: 12px;
+    padding  : 5px 8px;
+  }
+
+  /* Welcome message adjustments */
+  .welcome-icon { font-size: 42px; }
+  .welcome-message h3 { font-size: 1.1rem; }
+
+  /* Login card on small screens */
+  .login-card {
+    padding: 28px 22px;
+  }
+
+  /* Stack example buttons on mobile */
+  .example-questions {
+    flex-direction: column;
+  }
+
+  .example-btn {
+    width    : 100%;
+    text-align: left;
+  }
+}
+
+/* --- Very small: <= 380px --- */
+@media (max-width: 380px) {
+  .login-card {
+    padding: 22px 16px;
+  }
+
+  .header-actions .btn-clear-all {
+    display: none;       /* hide on very small screens */
+  }
+}

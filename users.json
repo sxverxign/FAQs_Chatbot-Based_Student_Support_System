@@ -1,0 +1,30 @@
+[
+  {
+    "username": "student001",
+    "password": "pass1234",
+    "fullName": "Alice Johnson",
+    "department": "Computer Science",
+    "level": "300"
+  },
+  {
+    "username": "student002",
+    "password": "mypassword",
+    "fullName": "Bob Williams",
+    "department": "Electrical Engineering",
+    "level": "200"
+  },
+  {
+    "username": "student003",
+    "password": "secret99",
+    "fullName": "Carol Smith",
+    "department": "Business Administration",
+    "level": "400"
+  },
+  {
+    "username": "admin",
+    "password": "admin123",
+    "fullName": "System Administrator",
+    "department": "IT Department",
+    "level": "N/A"
+  }
+]
