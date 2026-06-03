@@ -19,3 +19,6 @@ How to Run:
 	Password: pass1234
 
    then click "Login".
+
+
+OR Open the link: https://faqs-chatbot-based-student-support-system.onrender.com
