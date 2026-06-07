@@ -389,86 +389,100 @@ function preprocessText(text) {
 
 // ============================================================
 // NLP CORE — Synonym / intent expansion map
-// Maps common student phrases to standard keywords
 // ============================================================
 const SYNONYM_MAP = {
-  // Registration-related
-  'sign up'       : 'register',
-  'enroll'        : 'register',
-  'enrolment'     : 'registration',
-  'signup'        : 'register',
-  'add'           : 'register',
-  'taking'        : 'register',
-  'subjects'      : 'courses',
-  'units'         : 'courses',
-  'classes'       : 'courses',
 
-  // Grade-related
-  'marks'         : 'grade',
-  'score'         : 'grade',
-  'scoring'       : 'grade',
-  'scored'        : 'grade',
-  'fail'          : 'failed',
-  'failing'       : 'failed',
-  'pass'          : 'passed',
-  'retake'        : 'carryover',
-  'redo'          : 'carryover',
-  'repeat'        : 'carryover',
-  'supplementary' : 'carryover',
-  'average'       : 'gpa',
-  'points'        : 'gpa',
-  'cumulative'    : 'cgpa',
+  // --- Registration routing ---
+  'enroll'         : 'registration',
+  'enrollment'     : 'registration',
+  'signup'         : 'registration',
+  'sign'           : 'registration',
+  'registering'    : 'registration',
+  'registered'     : 'registration',
+  'portal'         : 'registration',
+  'proceed'        : 'registration',
 
-  // Payment-related
-  'tuition'       : 'fees',
-  'pay'           : 'payment',
-  'paying'        : 'payment',
-  'paid'          : 'payment',
-  'cost'          : 'fees',
-  'amount'        : 'fees',
-  'money'         : 'fees',
+  // --- GPA specific routing ---
+  'average'        : 'gpa',
+  'semester average': 'gpa',
+  'gpa'            : 'gpa',
 
-  // Dress code-related
-  'wear'          : 'dress',
-  'wearing'       : 'dress',
-  'outfit'        : 'dress',
-  'clothes'       : 'dress',
-  'clothing'      : 'dress',
-  'attire'        : 'dress',
-  'slippers'      : 'slippers',
-  'flip'          : 'slippers',
-  'flops'         : 'slippers',
-  'sandals'       : 'footwear',
+  // --- CGPA specific routing ---
+  'cumulative'     : 'cgpa',
+  'overall'        : 'cgpa',
+  'cgpa'           : 'cgpa',
 
-  // Portal-related
-  'website'       : 'portal',
-  'online'        : 'portal',
-  'login'         : 'portal',
-  'account'       : 'portal',
-  'log in'        : 'portal',
+  // --- TLU specific routing ---
+  'tlu'            : 'tlu',
+  'load units'     : 'tlu',
 
-  // Result-related
-  'transcript'    : 'result',
-  'grades'        : 'result',
-  'check'         : 'result',
-  'view'          : 'result',
+  // --- CLU specific routing ---
+  'clu'            : 'clu',
+  'cumulative load': 'clu',
 
-  // Library-related
-  'books'         : 'library',
-  'borrow'        : 'library',
+  // --- TCP specific routing ---
+  'tcp'            : 'tcp',
+  'credit points'  : 'tcp',
 
-  // Health-related
-  'sick'          : 'health',
-  'doctor'        : 'health',
-  'nurse'         : 'health',
-  'hospital'      : 'health',
-  'clinic'        : 'health',
+  // --- CCP specific routing ---
+  'ccp'            : 'ccp',
+  'cumulative credit': 'ccp',
 
-  // Project-related
-  'thesis'        : 'project',
-  'dissertation'  : 'project',
-  'fyp'           : 'project',
-  'research'      : 'project',
+  // --- Grade point specific routing ---
+  'gp'             : 'grade point',
+  'grade points'   : 'grade point',
+  'point value'    : 'grade point',
+
+  // --- Grading system routing ---
+  'marks'          : 'grading',
+  'score'          : 'grading',
+  'scores'         : 'grading',
+  'percentage'     : 'grading',
+
+  // --- Carryover routing ---
+  'carryover'      : 'carryover',
+  'carry'          : 'carryover',
+  'retake'         : 'carryover',
+  'repeat'         : 'carryover',
+  'failed'         : 'carryover',
+  'fail'           : 'carryover',
+
+  // --- Dress code routing ---
+  'wear'           : 'dress',
+  'wearing'        : 'dress',
+  'outfit'         : 'dress',
+  'clothes'        : 'dress',
+  'clothing'       : 'dress',
+  'attire'         : 'dress',
+  'dressed'        : 'dress',
+  'dressing'       : 'dress',
+
+  // --- Exam routing ---
+  'exam'           : 'examination',
+  'exams'          : 'examination',
+  'test'           : 'examination',
+  'paper'          : 'examination',
+  'finals'         : 'examination',
+  'examination'    : 'examination',
+
+  // --- Probation routing ---
+  'probation'      : 'probation',
+  'warning'        : 'probation',
+  'dismissed'      : 'probation',
+  'withdrawal'     : 'probation',
+
+  // --- CA routing ---
+  'ca'             : 'continuous assessment',
+  'coursework'     : 'continuous assessment',
+  'assignment'     : 'continuous assessment',
+  'quiz'           : 'continuous assessment',
+
+  // --- Footwear routing ---
+  'slippers'       : 'slippers',
+  'flip'           : 'slippers',
+  'sandals'        : 'slippers',
+  'footwear'       : 'slippers',
+  'shoes'          : 'slippers',
 };
 
 // ============================================================
