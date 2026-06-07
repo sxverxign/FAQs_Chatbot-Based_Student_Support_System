@@ -2,20 +2,17 @@
   {
     "id": 1,
     "keywords": [
-      "what is course registration",
-      "define course registration",
-      "meaning of course registration",
-      "describe course registration",
-      "explain course registration",
-      "definition of registration",
+      "course registration",
+      "enrollment",
+      "what is registration",
+      "registration meaning",
+      "define registration",
+      "registration definition",
       "enrollment meaning",
       "what does registration mean",
       "what is enrollment",
-      "registration definition",
-      "meant by course registration",
-      "about course registration",
-      "do you know course registration",
-      "would you describe registration",
+      "describe registration",
+      "explain registration",
       "tell me about registration"
     ],
     "question": "What is Course Registration?",
@@ -24,20 +21,18 @@
   {
     "id": 2,
     "keywords": [
-      "how do i register courses",
       "how to register courses",
-      "steps to register courses",
+      "steps register courses",
+      "register courses portal",
       "course registration steps",
-      "how do i enroll for courses",
-      "how to enroll courses",
+      "how enroll courses",
       "register my courses",
-      "registering courses portal",
-      "how do i sign up for courses",
-      "course registration process",
+      "sign up courses",
+      "registration process portal",
       "register for semester",
-      "how to proceed with registration",
-      "student portal registration",
-      "register courses online"
+      "proceed registration",
+      "register courses online",
+      "how do i register"
     ],
     "question": "How do I register courses for the semester?",
     "answer": "To register your courses, follow these steps:\n1. Log into the student portal\n2. Navigate to the Course Registration section\n3. Select your required session and semester\n4. Click 'Proceed' to view available courses\n5. Select your preferred courses and complete the registration."
@@ -45,20 +40,18 @@
   {
     "id": 3,
     "keywords": [
-      "when does registration open",
-      "when can i register courses",
-      "when does course registration start",
+      "registration open",
+      "when registration starts",
       "registration opening date",
       "registration deadline",
       "registration timing",
-      "when to register courses",
-      "course registration period",
-      "how early can i register",
-      "registration start date",
-      "when is registration",
+      "when to register",
+      "registration period",
+      "registration window",
+      "deadline registration",
       "registration commencement",
-      "course registration window",
-      "deadline for course registration"
+      "when can i register",
+      "registration start date"
     ],
     "question": "When does course registration open?",
     "answer": "Course registration typically opens 2 to 4 weeks before the commencement of semester examinations. You can complete your registration through the student portal during this period. Make sure to register before the deadline to avoid penalties or being unable to sit for your examinations."
@@ -67,21 +60,18 @@
     "id": 4,
     "keywords": [
       "available courses",
-      "find available courses",
-      "courses for my level",
-      "courses for my department",
-      "course list",
-      "where to find courses",
-      "courses for 100 level",
-      "courses for 200 level",
-      "courses for 300 level",
-      "courses for 400 level",
-      "courses for 500 level",
-      "departmental course list",
+      "find courses level",
+      "courses my department",
+      "course list department",
       "notice board courses",
-      "how do i know my courses",
-      "what courses can i take",
-      "which courses are available"
+      "courses 100 level",
+      "courses 200 level",
+      "courses 300 level",
+      "courses 400 level",
+      "courses 500 level",
+      "departmental course list",
+      "which courses available",
+      "what courses take"
     ],
     "question": "How can I find available courses for my level and department?",
     "answer": "All courses available for each semester — 100, 200, 300, 400, and 500 level — are displayed on the notice board at your respective departmental office. Please check your department's notice board regularly for updates at the beginning of each semester."
@@ -89,19 +79,17 @@
   {
     "id": 5,
     "keywords": [
-      "what are course codes",
+      "course codes",
       "course code meaning",
-      "what does a course code mean",
-      "how to read course codes",
-      "explain course codes",
-      "what do course codes represent",
       "course code letters",
       "course code numbers",
-      "identify courses by code",
       "csc course code",
-      "what does CSC mean",
+      "read course codes",
       "course identifier",
-      "department course code"
+      "department course code",
+      "what does csc mean",
+      "course code represent",
+      "identify course code"
     ],
     "question": "What are course codes?",
     "answer": "Course codes are unique identifiers made up of letters and numbers that help students identify specific courses. The letters represent the department offering the course, and the numbers indicate the level and sequence of the course.\n\nExample: CSC 301 — Introduction to Object Oriented Programming.\n• CSC = Computer Science department\n• 3 = 300 level course\n• 01 = first course in that sequence"
@@ -109,21 +97,20 @@
   {
     "id": 6,
     "keywords": [
-      "difference between core elective required",
       "core courses",
       "elective courses",
       "required courses",
       "prerequisite courses",
       "types of courses",
-      "what is a core course",
-      "what is an elective course",
-      "what is a required course",
+      "core vs elective",
       "compulsory courses",
       "optional courses",
-      "does elective count toward degree",
-      "degree classification courses",
-      "course types explained",
-      "core vs elective"
+      "elective count degree",
+      "course types",
+      "difference core elective",
+      "what is core course",
+      "what is elective course",
+      "what is required course"
     ],
     "question": "What is the difference between Core, Elective, and Required Courses?",
     "answer": "Core Courses: These are courses prescribed by your program that must be passed to graduate. Grades from core courses count toward your degree classification.\n\nElective Courses: These are optional courses. They must be passed if taken, but their grades do NOT count toward your degree classification.\n\nRequired Courses (Prerequisites): These must be passed before you are allowed to take a higher-level course that depends on them.\nExample: CSC 301 must be passed before taking CSC 302."
@@ -131,19 +118,17 @@
   {
     "id": 7,
     "keywords": [
-      "what do course units represent",
-      "what are course units",
-      "meaning of course units",
-      "what is a credit unit",
-      "credit hours meaning",
-      "what does one unit mean",
-      "unit in lecture",
-      "unit in laboratory",
-      "unit in workshop",
-      "how many hours is one unit",
+      "course units represent",
+      "credit unit meaning",
+      "credit hour meaning",
+      "one unit lecture",
+      "unit laboratory hours",
+      "unit workshop",
+      "hours per unit",
       "credit unit definition",
-      "what is a credit hour",
-      "lecture hours per unit"
+      "what are course units",
+      "unit in fieldwork",
+      "semester unit"
     ],
     "question": "What do course units represent?",
     "answer": "One semester unit represents one of the following:\n• 1 hour of classroom lecture per week for one semester, OR\n• 3 to 4 hours of laboratory work per week for one semester, OR\n• Equivalent time spent in workshop or fieldwork activities.\n\nThe total number of units you are registered for in a semester is known as your Total Load Units (TLU)."
@@ -151,19 +136,17 @@
   {
     "id": 8,
     "keywords": [
-      "minimum units per semester",
-      "maximum units per semester",
-      "how many units can i register",
-      "unit limit per semester",
+      "minimum units semester",
+      "maximum units semester",
+      "unit limit semester",
       "minimum course load",
       "maximum course load",
-      "15 units minimum",
-      "24 units maximum",
-      "how many courses can i take",
-      "course unit limit",
+      "15 units",
+      "24 units",
       "unit registration limit",
-      "can i register more than 24 units",
-      "minimum registration units"
+      "register more than 24",
+      "how many units register",
+      "unit cap semester"
     ],
     "question": "What are the minimum and maximum course units I can register per semester?",
     "answer": "The university sets the following unit registration limits per semester:\n\n• Minimum: 15 units per semester\n• Maximum: 24 units per semester\n\nRegistering below 15 units may affect your academic progress, and you cannot register above 24 units without special approval from your department."
@@ -171,21 +154,17 @@
   {
     "id": 9,
     "keywords": [
-      "add or drop a course",
-      "how to drop a course",
-      "how to add a course",
-      "withdraw from a course",
-      "remove a course after registration",
-      "change course after registration",
-      "delete a course",
-      "course adjustment",
-      "course change form",
-      "academic affairs office course change",
+      "add course",
+      "drop course",
+      "withdraw course",
+      "remove course registration",
+      "change course registration",
+      "course adjustment form",
+      "academic affairs course change",
       "6 weeks course change",
       "late course changes",
-      "can i drop a course",
-      "can i add a course after registration",
-      "withdraw from course"
+      "course adjustment period",
+      "delete registered course"
     ],
     "question": "How can I add or drop a course after registration?",
     "answer": "To add or drop a course after registration, you must do so within 6 weeks of the commencement of lectures. To make changes:\n\n1. Obtain the prescribed course change form from the Academic Affairs Office\n2. Complete the form with the course(s) you wish to add or drop\n3. Get the required signatures and approvals\n4. Submit the completed form for processing\n\nNo course changes are permitted after the 6-week window has closed."
@@ -193,17 +172,15 @@
   {
     "id": 10,
     "keywords": [
-      "what does registration include",
-      "does registration include exam",
-      "am i automatically registered for exam",
-      "registered for lectures and exam",
-      "what happens when i register a course",
+      "registration includes exam",
+      "automatically registered exam",
+      "registered lectures exam",
       "registration includes examination",
       "automatic exam registration",
-      "enrolled in lectures",
-      "does course registration sign me up for exam",
-      "registration benefits",
-      "what comes with course registration"
+      "enrolled lectures automatically",
+      "registration sign up exam",
+      "what comes registration",
+      "what happens register course"
     ],
     "question": "What does course registration include?",
     "answer": "When you register for a course at the beginning of a semester, you are automatically:\n• Enrolled in the course lectures for that semester\n• Registered for the course examination at the end of the semester\n\nThis means you do not need to separately sign up for the examination. However, failure to register a course means you cannot sit for its examination."
@@ -211,21 +188,15 @@
   {
     "id": 11,
     "keywords": [
-      "what happens if i fail a course",
-      "failed a course",
+      "fail course consequence",
+      "failed course result",
       "course failure",
-      "carry over course",
-      "carryover meaning",
-      "what is carryover",
-      "define carryover",
-      "what is carry over",
-      "failed and must retake",
       "carry over to next year",
-      "failed prerequisite",
-      "failed course consequence",
-      "retake a failed course",
-      "repeat a failed course",
-      "carry over explained"
+      "failed must retake",
+      "repeat failed course",
+      "carryover explained",
+      "what happens fail",
+      "failed prerequisite course"
     ],
     "question": "What happens if I fail a course?",
     "answer": "If you fail a course (score below the passing mark), the following applies:\n\n• The failed course becomes a carryover course and must be repeated in the corresponding semester of the following academic year.\n• If the failed course is a prerequisite (required course), you must pass it before you are allowed to take higher-level courses that depend on it.\n• Carryover courses affect your CGPA negatively and may delay your graduation if not cleared promptly.\n\nAlways consult your academic adviser to plan how to manage carryover courses effectively."
@@ -234,22 +205,18 @@
     "id": 12,
     "keywords": [
       "grading system fuoye",
-      "grades at fuoye",
+      "grades fuoye",
       "grade scale fuoye",
-      "what is grade A at fuoye",
-      "what score is A",
-      "what score is B",
-      "what score is C",
-      "what score is D",
-      "what score is E",
-      "what score is F",
-      "fuoye grade values",
-      "fuoye grading system explained",
-      "70 to 100 grade",
-      "60 to 69 grade",
-      "how are grades determined",
+      "grade A score",
+      "grade B score",
+      "grade C score",
+      "grade D score",
+      "grade E score",
+      "grade F score",
       "grading scale university",
-      "score to grade conversion"
+      "score grade conversion",
+      "how grades determined fuoye",
+      "fuoye grading"
     ],
     "question": "What is the grading system used at FUOYE?",
     "answer": "FUOYE uses the following grading system:\n\n• A: 70 – 100 marks = 5 Grade Points (Excellent)\n• B: 60 – 69 marks = 4 Grade Points (Very Good)\n• C: 50 – 59 marks = 3 Grade Points (Good)\n• D: 45 – 49 marks = 2 Grade Points (Pass)\n• E: 40 – 44 marks = 1 Grade Point (Conditional Pass)\n• F: 0 – 39 marks = 0 Grade Points (Fail)\n\nAny score below 40 is a failure and the course must be retaken."
@@ -257,22 +224,16 @@
   {
     "id": 13,
     "keywords": [
-      "what is grade point average in calculating results",
-      "what is grade point average",
+      "what is gpa",
       "gpa meaning",
-      "define gpa",
-      "grade point average definition",
-      "how is gpa calculated",
-      "gpa calculation",
+      "gpa stands for",
+      "grade point average",
       "gpa formula",
-      "what does gpa stand for",
-      "what does gpa stand mean",
-      "calculate my gpa",
-      "semester gpa",
-      "how to calculate grade point average",
-      "tcp divided by tlu",
+      "gpa semester",
       "gpa explained",
-      "gpa and tcp tlu"
+      "gpa definition",
+      "define gpa",
+      "semester average gpa"
     ],
     "question": "What is GPA and how is it calculated?",
     "answer": "GPA stands for Grade Point Average. It measures your academic performance for a single semester.\n\nFormula:\nGPA = TCP ÷ TLU\n\nWhere:\n• TCP (Total Credit Points) = the sum of (Course Units × Grade Points) for all courses in the semester\n• TLU (Total Load Units) = the total number of course units registered in the semester\n\nExample:\nIf you take 3 courses:\n• Course A: 3 units × 5 GP = 15\n• Course B: 2 units × 4 GP = 8\n• Course C: 3 units × 3 GP = 9\n\nTCP = 15 + 8 + 9 = 32\nTLU = 3 + 2 + 3 = 8\nGPA = 32 ÷ 8 = 4.00"
@@ -282,18 +243,14 @@
     "keywords": [
       "what is cgpa",
       "cgpa meaning",
-      "define cgpa",
+      "cgpa stands for",
       "cumulative grade point average",
-      "how is cgpa calculated",
       "cgpa formula",
-      "cgpa calculation",
-      "what does cgpa stand for",
-      "calculate cgpa",
-      "overall academic average",
-      "cgpa across all semesters",
-      "ccp divided by clu",
+      "cgpa overall",
       "cgpa explained",
-      "cgpa and ccp clu"
+      "cgpa definition",
+      "define cgpa",
+      "overall academic average"
     ],
     "question": "What is CGPA and how is it calculated?",
     "answer": "CGPA stands for Cumulative Grade Point Average. It measures your overall academic performance across all semesters from the beginning of your program to date.\n\nFormula:\nCGPA = CCP ÷ CLU\n\nWhere:\n• CCP (Cumulative Credit Points) = sum of all TCPs from every semester\n• CLU (Cumulative Load Units) = sum of all TLUs from every semester\n\nImportant: CGPA is NOT simply the average of your individual semester GPAs. It must be recalculated using total cumulative values.\n\nYour CGPA determines your degree classification at graduation."
@@ -302,18 +259,15 @@
     "id": 15,
     "keywords": [
       "degree classification",
-      "how degrees are awarded",
-      "first class cgpa",
-      "second class upper cgpa",
-      "second class lower cgpa",
-      "third class cgpa",
-      "cgpa range for first class",
-      "cgpa range for second class",
-      "what cgpa do i need",
+      "degrees awarded cgpa",
+      "first class honours",
+      "second class upper",
+      "second class lower",
+      "third class honours",
       "graduation class",
       "honours classification",
-      "degree distribution",
-      "cgpa and degree",
+      "cgpa range degree",
+      "degree distribution cgpa",
       "4.50 to 5.00",
       "3.50 to 4.49",
       "2.40 to 3.49",
@@ -326,20 +280,16 @@
     "id": 16,
     "keywords": [
       "cgpa below 1.50",
-      "low cgpa",
-      "probation",
-      "academic probation",
-      "academic warning",
-      "what happens if cgpa is low",
-      "probation 1",
-      "probation 2",
-      "withdrawal from university",
-      "dismissed from university",
-      "poor academic performance",
-      "cgpa consequences",
-      "failing cgpa",
+      "low cgpa consequence",
+      "probation i",
+      "probation ii",
+      "academic probation cgpa",
+      "withdrawal university cgpa",
+      "dismissed university cgpa",
+      "poor cgpa result",
+      "failing cgpa consequence",
       "below minimum cgpa",
-      "how to clear probation"
+      "clear probation cgpa"
     ],
     "question": "What happens if my CGPA falls below 1.50?",
     "answer": "If your CGPA falls below 1.50, the following consequences apply:\n\n• 1st semester below 1.50: Probation I — you are placed on academic probation\n• 2nd consecutive semester below 1.50: Probation II — you receive a formal academic warning\n• 3rd consecutive semester below 1.50: You will be required to withdraw from the university\n\nTo clear probation, you must raise your CGPA to at least 1.50. It is strongly advised to consult your academic adviser immediately if your CGPA is at risk."
@@ -349,16 +299,14 @@
     "keywords": [
       "what is tlu",
       "tlu meaning",
-      "define tlu",
+      "tlu stands for",
       "total load units",
-      "tlu explained",
-      "how to calculate tlu",
+      "tlu formula",
       "tlu calculation",
       "semester load units",
-      "total units in a semester",
-      "tlu formula",
-      "what does tlu stand for",
-      "registered units per semester"
+      "tlu definition",
+      "define tlu",
+      "registered units semester tlu"
     ],
     "question": "What is TLU (Total Load Units)?",
     "answer": "TLU stands for Total Load Units. It is the total number of course units you are registered for in a particular semester.\n\nFormula:\nTLU = Sum of units of all courses registered in the semester\n\nExample:\nIf you register 6 courses each worth 3 units:\nTLU = 6 × 3 = 18 units\n\nTLU is used in the GPA formula:\nGPA = TCP ÷ TLU"
@@ -368,16 +316,14 @@
     "keywords": [
       "what is clu",
       "clu meaning",
-      "define clu",
+      "clu stands for",
       "cumulative load units",
-      "clu explained",
-      "how to calculate clu",
-      "clu calculation",
-      "total units all semesters",
-      "sum of all tlu",
       "clu formula",
-      "what does clu stand for",
-      "accumulated units"
+      "clu calculation",
+      "sum all tlu",
+      "clu definition",
+      "define clu",
+      "accumulated load units"
     ],
     "question": "What is CLU (Cumulative Load Units)?",
     "answer": "CLU stands for Cumulative Load Units. It is the sum of all Total Load Units (TLUs) from every semester from the beginning of your program up to the current semester.\n\nFormula:\nCLU = TLU(Semester 1) + TLU(Semester 2) + TLU(Semester 3) + ... (all semesters)\n\nCLU is used in the CGPA formula:\nCGPA = CCP ÷ CLU"
@@ -387,16 +333,14 @@
     "keywords": [
       "what is tcp",
       "tcp meaning",
-      "define tcp",
+      "tcp stands for",
       "total credit points",
-      "tcp explained",
-      "how to calculate tcp",
-      "tcp calculation",
       "tcp formula",
-      "what does tcp stand for",
-      "course units times grade point",
-      "sum of credit points",
-      "semester credit points"
+      "tcp calculation",
+      "units times grade point",
+      "tcp definition",
+      "define tcp",
+      "semester credit points tcp"
     ],
     "question": "What is TCP (Total Credit Points)?",
     "answer": "TCP stands for Total Credit Points. It is the total number of grade points you earned in a single semester, calculated by multiplying each course's units by its grade point and summing the results.\n\nFormula:\nTCP = Sum of (Course Units × Grade Point) for all courses in the semester\n\nExample:\n• Course A: 3 units × 5 GP = 15\n• Course B: 2 units × 4 GP = 8\n• Course C: 3 units × 3 GP = 9\n\nTCP = 15 + 8 + 9 = 32\n\nTCP is used in the GPA formula:\nGPA = TCP ÷ TLU"
@@ -406,16 +350,14 @@
     "keywords": [
       "what is ccp",
       "ccp meaning",
-      "define ccp",
+      "ccp stands for",
       "cumulative credit points",
-      "ccp explained",
-      "how to calculate ccp",
-      "ccp calculation",
-      "total credit points all semesters",
-      "sum of all tcp",
       "ccp formula",
-      "what does ccp stand for",
-      "accumulated credit points"
+      "ccp calculation",
+      "sum all tcp",
+      "ccp definition",
+      "define ccp",
+      "accumulated credit points ccp"
     ],
     "question": "What is CCP (Cumulative Credit Points)?",
     "answer": "CCP stands for Cumulative Credit Points. It is the sum of all Total Credit Points (TCPs) earned across every semester from the beginning of your program up to the current semester.\n\nFormula:\nCCP = TCP(Semester 1) + TCP(Semester 2) + TCP(Semester 3) + ... (all semesters)\n\nCCP is used in the CGPA formula:\nCGPA = CCP ÷ CLU"
@@ -423,18 +365,16 @@
   {
     "id": 21,
     "keywords": [
-      "explain all academic terms",
-      "gpa cgpa tlu clu ccp tcp explained",
-      "all grade terms",
-      "academic abbreviations explained",
-      "what are gpa cgpa tlu clu ccp tcp",
-      "define all academic terms",
-      "all calculation terms",
-      "academic acronyms",
+      "all academic terms",
+      "gpa cgpa tlu clu ccp tcp",
+      "academic abbreviations",
       "grade calculation terms",
-      "list of academic terms",
-      "meaning of all grade terms",
-      "summary of academic terms"
+      "list academic terms",
+      "summary grade terms",
+      "all grade acronyms",
+      "academic acronyms explained",
+      "explain all terms",
+      "all calculation acronyms"
     ],
     "question": "What are GPA, CGPA, TLU, CLU, TCP, and CCP?",
     "answer": "Here is a summary of all key academic calculation terms:\n\n• GPA (Grade Point Average): Your grade average for one semester. Formula: GPA = TCP ÷ TLU\n\n• CGPA (Cumulative Grade Point Average): Your overall grade average across all semesters. Formula: CGPA = CCP ÷ CLU\n\n• TLU (Total Load Units): Total course units registered in one semester.\n\n• CLU (Cumulative Load Units): Sum of all TLUs from all semesters to date.\n\n• TCP (Total Credit Points): Sum of (Course Units × Grade Points) for one semester.\n\n• CCP (Cumulative Credit Points): Sum of all TCPs from all semesters to date."
@@ -444,18 +384,15 @@
     "keywords": [
       "exam schedule",
       "examination timetable",
-      "when is exam",
       "exam dates",
       "finals timetable",
-      "when are exams",
-      "exam period",
-      "examination period",
-      "when do exams start",
-      "how to get exam timetable",
-      "where to find exam schedule",
-      "exam time",
-      "final exam dates",
-      "semester exam schedule"
+      "exam period dates",
+      "get exam timetable",
+      "find exam schedule",
+      "semester exam dates",
+      "final exam timetable",
+      "when exams start",
+      "exam time portal"
     ],
     "question": "How do I get my examination timetable?",
     "answer": "Final examination timetables are published one to two weeks before the examination period begins. You can access your personalized examination schedule through the following channels:\n\n1. Log into your student portal and navigate to the 'Examination Timetable' or 'Schedule' section\n2. Check your departmental notice board\n3. Contact your class representative for a shared copy\n\nAlways confirm your exam venues and times carefully to avoid missing any paper."
@@ -463,19 +400,16 @@
   {
     "id": 23,
     "keywords": [
-      "course missing from results",
+      "course missing results",
       "registered course not showing",
-      "course not on exam results",
-      "result error",
-      "portal error results",
-      "missing course in result",
+      "course not exam results",
+      "missing course result",
       "ict center complaint",
-      "phase 3 ict center",
-      "course not appearing",
-      "results missing course",
-      "how to fix missing result",
-      "report missing course",
-      "course not found in result"
+      "phase 3 ict",
+      "course not appearing results",
+      "fix missing result",
+      "report missing course result",
+      "portal error missing course"
     ],
     "question": "What should I do if a registered course does not appear on my exam results?",
     "answer": "If a course you registered for is missing from your examination results, follow these steps:\n\n1. Visit the ICT Center located at Phase 3 (opposite the Faculty of Pharmacy)\n2. Report your complaint to the receptionist at the front desk\n3. You will be directed to the appropriate personnel who will investigate and resolve the issue\n\nBring your course registration evidence (portal printout or receipt) when you visit to support your complaint."
@@ -483,20 +417,16 @@
   {
     "id": 24,
     "keywords": [
-      "where to check grades",
-      "how to check my grades",
-      "how to view results",
+      "check grades portal",
+      "view results portal",
       "see my results",
-      "access grades",
-      "result checker",
+      "result checker portal",
       "check semester result",
-      "where are my grades",
-      "student portal grades",
-      "view my grades",
-      "how do i see my result",
-      "check academic results",
-      "grades on portal",
-      "result portal"
+      "where grades posted",
+      "view my grades online",
+      "how see result",
+      "access grades portal",
+      "grades on student portal"
     ],
     "question": "Where can I view my grades and results?",
     "answer": "You can view your grades and examination results by following these steps:\n\n1. Log into your student portal\n2. Navigate to the 'Result Checker' section\n3. Select the academic session and semester you wish to view\n4. Your grades for all registered courses will be displayed\n\nIf a result is missing or appears incorrect, contact the ICT Center or your departmental examination officer."
@@ -506,16 +436,14 @@
     "keywords": [
       "attendance policy",
       "attendance requirement",
-      "how much attendance is required",
-      "minimum attendance",
+      "minimum attendance percent",
       "80 percent attendance",
-      "barred from exam attendance",
+      "barred exam attendance",
       "miss too many classes",
-      "attendance and exam eligibility",
-      "can i be barred for attendance",
-      "attendance rules",
-      "class attendance percentage",
-      "what happens if attendance is low"
+      "attendance exam eligibility",
+      "barred attendance",
+      "attendance rules lectures",
+      "class attendance percentage"
     ],
     "question": "What is the attendance policy?",
     "answer": "Students are required to maintain at least 80% attendance in each course throughout the semester.\n\nConsequences of poor attendance:\n• Falling below 80% attendance in any course may result in being barred from sitting the final examination for that course\n• Persistent poor attendance across multiple courses may lead to more serious disciplinary actions including expulsion\n\nAlways inform your lecturer and provide documentation if you are absent due to a genuine emergency."
@@ -523,17 +451,15 @@
   {
     "id": 26,
     "keywords": [
-      "miss lecture medical reason",
-      "absent due to illness",
-      "sick and missed class",
-      "medical absence",
+      "miss lecture medical",
+      "absent illness lecture",
+      "sick missed class",
+      "medical absence lecture",
       "medical emergency class",
-      "miss lecture sick",
-      "documentation for absence",
-      "sick note university",
-      "health absence class",
-      "excused absence",
-      "ill and absent"
+      "sick note lecture",
+      "documentation absence lecture",
+      "excused absence medical",
+      "ill absent class"
     ],
     "question": "What should I do if I miss a lecture due to medical reasons?",
     "answer": "If you miss a lecture or examination due to a medical emergency or illness, you must provide proper documentation to support your absence. This includes:\n\n• A medical report or sick note from a recognized hospital or the university health center\n• The documentation should clearly state the dates of illness and confirm that you were medically unfit to attend\n\nSubmit this documentation to your lecturer and the academic affairs office as soon as possible after your recovery."
@@ -542,19 +468,15 @@
     "id": 27,
     "keywords": [
       "examination rules",
-      "exam rules",
-      "examination regulations",
-      "exam conduct",
-      "rules during exam",
-      "what to bring to exam",
-      "what is allowed in exam hall",
-      "what is not allowed in exam hall",
+      "exam regulations",
+      "exam conduct rules",
       "exam hall rules",
       "examination guidelines",
-      "exam policy",
-      "exam misconduct",
-      "cheating in exam",
-      "exam hall conduct"
+      "exam policy conduct",
+      "allowed exam hall",
+      "not allowed exam hall",
+      "exam hall behaviour",
+      "rules during exam"
     ],
     "question": "What are the examination rules and regulations?",
     "answer": "Students must observe the following rules during examinations:\n\n• Arrive at the examination hall at least 15 minutes before the exam begins\n• Bring your student ID card and examination timetable to every exam\n• Mobile phones, smart watches, and all electronic devices are strictly prohibited in the exam hall\n• No textbooks, notes, or unauthorized materials are allowed unless the exam is specified as open book\n• Students must sit according to their matriculation number seating arrangement\n• All bags and personal items must be left outside or at the front of the hall\n• Impersonation and examination malpractice carry severe penalties including expulsion\n• Do not communicate with other students during the examination"
@@ -562,19 +484,16 @@
   {
     "id": 28,
     "keywords": [
-      "late to exam",
-      "arrive late exam",
-      "missed exam",
-      "absent from exam",
-      "miss examination",
-      "what happens if late to exam",
-      "entry after exam starts",
-      "can i enter exam late",
+      "late exam arrival",
+      "arrive late examination",
+      "miss examination paper",
+      "absent exam paper",
       "late exam entry",
       "missed my paper",
-      "deferred examination",
-      "exam absence",
-      "missed paper"
+      "deferred examination apply",
+      "exam absence consequence",
+      "30 minutes late exam",
+      "missed paper deferred"
     ],
     "question": "What happens if I arrive late or miss an examination?",
     "answer": "If you arrive late to an examination:\n• You may be permitted to enter within the first 30 minutes at the discretion of the chief invigilator\n• You will not be given extra time — you must complete the paper within the remaining time\n• After 30 minutes, entry may be refused entirely\n\nIf you miss an examination entirely:\n• You will score zero (0) for that paper unless you have a valid documented reason\n• Apply for a Deferred Examination through your department within 48 hours, supported by a medical report or relevant official document\n• Late applications may not be considered"
@@ -582,19 +501,16 @@
   {
     "id": 29,
     "keywords": [
-      "dress code fuoye",
+      "dress code policy fuoye",
       "fuoye dress code",
-      "fuoye dressing policy",
-      "what is the dress code",
-      "dress code policy",
-      "dressing rules fuoye",
+      "dressing policy fuoye",
       "clothing rules fuoye",
-      "university dress code",
-      "what to wear at fuoye",
-      "dress code explained",
+      "what wear fuoye",
+      "dress code explained fuoye",
       "fuoye clothing regulations",
       "appearance rules fuoye",
-      "fuoye attire policy"
+      "fuoye attire policy",
+      "general dress code fuoye"
     ],
     "question": "What is the dress code policy at FUOYE?",
     "answer": "FUOYE maintains a dress code policy that emphasizes cleanliness, neatness, modesty, and decency, in line with the university's motto — 'Innovation and Character for National Transformation'.\n\nStudents are expected to:\n• Dress appropriately and modestly at all times on campus\n• Respect social, cultural, and religious dress standards\n• Avoid clothing that exposes sensitive parts of the body\n\nThe policy strictly prohibits tight-fitting clothes, transparent clothing, revealing outfits, inappropriate accessories, and untidy or dirty clothing."
@@ -603,16 +519,14 @@
     "id": 30,
     "keywords": [
       "prohibited clothing fuoye",
-      "what is not allowed to wear",
       "banned clothing fuoye",
       "forbidden clothes fuoye",
-      "what clothes are not allowed",
-      "inappropriate clothing list",
-      "what not to wear fuoye",
-      "dress code violations",
-      "prohibited attire",
-      "what is banned at fuoye",
-      "clothes not allowed on campus"
+      "clothes not allowed fuoye",
+      "inappropriate clothing list fuoye",
+      "what not wear fuoye",
+      "dress code violation list",
+      "prohibited attire fuoye",
+      "banned attire campus"
     ],
     "question": "What types of clothing are prohibited at FUOYE?",
     "answer": "The following clothing and accessories are prohibited at FUOYE:\n\n• Exposure of the thigh, chest, abdomen, or navel\n• Tight-fitting clothes including skirts, trousers, and blouses\n• Transparent clothing, spaghetti tops, mono straps, wicked straps, and tube tops\n• Party wear and beach wear\n• Tattered jeans, ripped jeans, and crazy jeans\n• Slippers, rumpled clothing, and dirty clothing\n• Clothing or accessories (arm-bands, caps, scarfs) with obscene or subliminal messages"
@@ -621,15 +535,14 @@
     "id": 31,
     "keywords": [
       "tight clothes fuoye",
-      "can i wear tight clothes",
       "tight fitting allowed",
       "skinny jeans allowed",
-      "body fit clothes allowed",
-      "tight skirt allowed",
-      "tight trousers allowed",
-      "bodycon allowed",
+      "bodycon allowed fuoye",
       "fitted clothing fuoye",
-      "is tight clothing allowed"
+      "tight skirt fuoye",
+      "tight trousers fuoye",
+      "body fit clothes fuoye",
+      "tight clothing policy"
     ],
     "question": "Can I wear tight-fitting clothes to school?",
     "answer": "No. Tight-fitting clothes of any kind are strictly prohibited at FUOYE. This includes tight skirts, tight trousers, bodycon dresses, skinny jeans, and tight blouses.\n\nAll clothing worn on campus must be modest and loose-fitting enough to comply with the university's dress code policy on decency and modesty."
@@ -638,15 +551,14 @@
     "id": 32,
     "keywords": [
       "jeans fuoye",
-      "can i wear jeans",
       "jeans allowed fuoye",
       "denim fuoye",
-      "tattered jeans",
+      "tattered jeans fuoye",
       "ripped jeans fuoye",
       "torn jeans fuoye",
       "crazy jeans fuoye",
-      "are jeans allowed",
-      "wearing jeans to class"
+      "wearing jeans campus",
+      "distressed jeans fuoye"
     ],
     "question": "Are jeans allowed at FUOYE?",
     "answer": "Regular, neat, and decent jeans are allowed at FUOYE. However, the following types of jeans are strictly prohibited:\n\n• Tattered jeans (torn or worn-out)\n• Ripped or distressed jeans\n• Crazy jeans (jeans with excessive decorations or cuts)\n• Tight-fitting jeans\n\nJeans worn on campus must be neat, modest, and compliant with the general dress code policy."
@@ -655,16 +567,14 @@
     "id": 33,
     "keywords": [
       "slippers fuoye",
-      "can i wear slippers",
-      "slippers on campus",
-      "slippers to class",
+      "slippers campus",
+      "slippers class fuoye",
       "flip flops fuoye",
       "footwear rules fuoye",
-      "what shoes to wear fuoye",
+      "shoes policy fuoye",
       "proper footwear fuoye",
-      "sandals fuoye",
-      "is slippers allowed",
-      "shoes policy fuoye"
+      "sandals fuoye campus",
+      "footwear allowed fuoye"
     ],
     "question": "Can I wear slippers to class?",
     "answer": "No. Slippers and flip-flops are prohibited as footwear on campus at FUOYE. They are listed among the items of prohibited clothing in the university dress code.\n\nStudents are required to wear proper and decent footwear such as closed shoes, loafers, formal sandals, or other appropriate footwear when on campus or in academic areas."
@@ -674,17 +584,14 @@
     "keywords": [
       "male hair rules fuoye",
       "men hair fuoye",
-      "hair rules for boys",
-      "haircut rules male",
+      "boys hair fuoye",
+      "haircut rules male fuoye",
       "dreadlocks male fuoye",
-      "plaited hair male fuoye",
+      "plaited hair male",
       "braided hair male fuoye",
-      "colored hair male fuoye",
-      "earrings male fuoye",
-      "tattoos male fuoye",
-      "piercing male fuoye",
       "male grooming fuoye",
-      "what hairstyle for men fuoye"
+      "hairstyle men fuoye",
+      "colored hair male fuoye"
     ],
     "question": "What are the hair and grooming rules for male students at FUOYE?",
     "answer": "Male students at FUOYE must observe the following hair and grooming rules:\n\n• Hair must be kept neat and well-combed at all times\n• The following are prohibited:\n  - Colored or tinted hair\n  - Haircuts with inscriptions or designs\n  - Curled hair, artificial dreadlocks, plaited hair, braided hair, and weaved hair\n\n• The following accessories and body modifications are also prohibited:\n  - Earrings, studs, or any form of ear jewelry\n  - Tattoos and indelible body markings\n  - Body piercings of any kind\n\nMale students must maintain a clean, kempt, and professional appearance at all times."
@@ -694,16 +601,15 @@
     "keywords": [
       "female hair rules fuoye",
       "women hair fuoye",
-      "hair rules for girls",
+      "girls hair fuoye",
       "weaving allowed fuoye",
       "plaiting allowed fuoye",
       "braiding allowed fuoye",
       "wigs allowed fuoye",
       "hair extensions fuoye",
-      "tinted hair female fuoye",
-      "colored hair female fuoye",
       "female grooming fuoye",
-      "what hairstyle for women fuoye"
+      "hairstyle women fuoye",
+      "tinted hair female fuoye"
     ],
     "question": "What are the hair rules for female students at FUOYE?",
     "answer": "Female students at FUOYE may wear the following hairstyles, provided they are neat and well-maintained:\n\n• Weaving, plaiting, and braiding — allowed\n• Hair fixing and modest wigs — allowed\n• All hairstyles must be well-packed and tidy at all times\n\nThe following are prohibited for female students:\n• Tinted or colored hair\n• Hairstyles with inscriptions or designs\n\nAll hair must be maintained to a decent and modest standard in line with the dress code."
@@ -712,16 +618,15 @@
     "id": 36,
     "keywords": [
       "earrings male fuoye",
-      "can male wear earrings",
+      "male earrings fuoye",
       "studs male fuoye",
-      "tattoos allowed male",
+      "tattoos male fuoye",
       "body piercing male fuoye",
-      "piercings allowed fuoye",
       "male jewelry fuoye",
       "boys earrings fuoye",
-      "body art fuoye",
+      "body art male fuoye",
       "indelible markings fuoye",
-      "can boys have tattoos"
+      "piercings male fuoye"
     ],
     "question": "Can male students wear earrings or have tattoos at FUOYE?",
     "answer": "No. The following are strictly prohibited for male students at FUOYE:\n\n• Earrings or ear studs of any kind\n• Tattoos or any indelible body markings\n• Body piercings of any form\n\nViolation of these grooming rules is subject to disciplinary action by the university authorities."
@@ -731,16 +636,14 @@
     "keywords": [
       "transparent clothes fuoye",
       "revealing clothes fuoye",
-      "see-through clothes fuoye",
+      "see through clothes fuoye",
       "spaghetti tops fuoye",
       "tube tops fuoye",
       "strapless tops fuoye",
-      "sleeveless tops fuoye",
-      "exposure of body fuoye",
-      "can i wear revealing clothes",
+      "exposure body fuoye",
+      "revealing clothing fuoye",
       "chest exposure fuoye",
-      "belly exposed fuoye",
-      "revealing clothing policy"
+      "belly exposed fuoye"
     ],
     "question": "Are transparent or revealing clothes allowed at FUOYE?",
     "answer": "No. Clothing that reveals or exposes sensitive parts of the body is totally prohibited at FUOYE. This includes:\n\n• Transparent or see-through clothing\n• Spaghetti tops, tube tops, wicked straps, and mono straps\n• Clothing that exposes the chest, belly, upper arms, underwear, or buttocks\n• Strapless tops and overly sleeveless tops\n\nAll clothing worn on campus must adequately cover the body in a modest and decent manner."
@@ -751,14 +654,12 @@
       "religious clothing fuoye",
       "hijab fuoye",
       "denominational dress fuoye",
-      "can i wear hijab",
       "religious dress allowed",
       "faith based clothing fuoye",
       "muslim dress fuoye",
       "christian dress fuoye",
       "religious attire fuoye",
-      "can i wear religious clothing",
-      "place of worship dress"
+      "worship dress fuoye"
     ],
     "question": "Can I wear religious or denominational clothing at FUOYE?",
     "answer": "Yes. Students are permitted to wear religious or denominational dress (such as hijabs or other faith-based attire) provided that the clothing conforms to the general dress code principles of modesty, decency, neatness, and cleanliness.\n\nStudents who dress according to their religious dictates must subject themselves to identification when required — particularly in examination halls, laboratories, and libraries — so that their identity can be confirmed when necessary."
@@ -767,15 +668,14 @@
     "id": 39,
     "keywords": [
       "laboratory clothing fuoye",
-      "what to wear in lab",
+      "wear in lab fuoye",
       "lab coat fuoye",
       "practical attire fuoye",
       "safety wear lab fuoye",
-      "protective clothing lab",
-      "professional dress lab",
-      "lab attire fuoye",
-      "dress for practical fuoye",
-      "lab safety clothing"
+      "protective clothing lab fuoye",
+      "lab dress fuoye",
+      "lab safety clothing fuoye",
+      "dress practical fuoye"
     ],
     "question": "What should I wear in the laboratory?",
     "answer": "Students in departments that require laboratory practicals or fieldwork must wear appropriate professional, safety, or protective clothing as specified by their department and approved by the relevant supervisory professional body and the University Senate.\n\nThis typically includes:\n• Lab coats (white coats) for science and medical-related courses\n• Safety goggles and gloves where required\n• Closed-toe shoes — open footwear is never permitted in a laboratory\n\nAlways follow the specific safety clothing requirements given by your lecturer or laboratory supervisor."
@@ -790,9 +690,8 @@
       "jersey fuoye",
       "tracksuit fuoye",
       "exercise clothes fuoye",
-      "can i wear sportswear",
       "sports dress fuoye",
-      "sports wear in class"
+      "sportswear class fuoye"
     ],
     "question": "Can I wear sportswear on campus?",
     "answer": "Sportswear is only permitted within sports and game areas on campus. Students participating in sporting activities may wear appropriate sportswear (such as jerseys, tracksuits, or shorts) exclusively within the designated sports area.\n\nSportswear must not be worn:\n• In classrooms or lecture halls\n• In the library\n• In administrative offices\n• In any other academic areas\n\nOutside of sports areas, students must comply with the general dress code policy."
@@ -801,16 +700,15 @@
     "id": 41,
     "keywords": [
       "dress code violation fuoye",
-      "what happens if i violate dress code",
-      "penalty for dress code violation",
-      "punishment for dressing wrongly",
-      "consequences of breaking dress code",
-      "disciplinary action dress code",
-      "sanctions for dress code",
-      "who enforces dress code fuoye",
-      "dress code enforcement fuoye",
-      "excluded for dressing",
-      "barred for dressing"
+      "violate dress code fuoye",
+      "penalty dress code fuoye",
+      "punishment dressing wrongly fuoye",
+      "consequences breaking dress code",
+      "disciplinary action dress code fuoye",
+      "sanctions dress code fuoye",
+      "enforce dress code fuoye",
+      "excluded dressing fuoye",
+      "barred dressing fuoye"
     ],
     "question": "What happens if I violate the dress code at FUOYE?",
     "answer": "All staff members of FUOYE are empowered to enforce the dress code rules during the course of their duties. The consequences of violating the dress code include:\n\n• Being excluded from participating in any university activity or exercise\n• Being denied entry to lecture halls, examination halls, laboratories, or administrative offices\n• Formal disciplinary sanctions from the university authority\n\nThe university authority reserves the right to apply appropriate penalties to any student found in contravention of the dress code policy."
@@ -820,14 +718,12 @@
     "keywords": [
       "party wear fuoye",
       "beach wear fuoye",
-      "can i wear party clothes",
-      "party clothes on campus",
+      "party clothes campus",
       "beach clothes fuoye",
       "club wear fuoye",
-      "night wear fuoye",
-      "casual inappropriate clothing",
-      "are party clothes allowed",
-      "inappropriate casual wear"
+      "night wear campus fuoye",
+      "party dress school fuoye",
+      "inappropriate casual fuoye"
     ],
     "question": "Can I wear party clothes or beach wear to school?",
     "answer": "No. Party wear and beach wear are explicitly listed among the prohibited clothing items in the FUOYE dress code policy.\n\nSuch clothing is considered inappropriate for an academic environment and does not meet the university's standards of modesty, decency, and cleanliness. Students should dress in attire that is appropriate for an academic institution at all times."
@@ -840,9 +736,9 @@
       "performing arts dress fuoye",
       "drama costume fuoye",
       "special dress theatre fuoye",
-      "costume allowed fuoye",
+      "costume fuoye",
       "professional training dress fuoye",
-      "can theatre students wear costumes",
+      "theatre costume fuoye",
       "media arts clothing fuoye"
     ],
     "question": "Are there special dress provisions for Theatre and Media Arts students?",
@@ -853,13 +749,13 @@
     "keywords": [
       "modesty dress code fuoye",
       "modest dressing fuoye",
-      "decency in dressing fuoye",
+      "decency dressing fuoye",
       "appropriate dressing fuoye",
       "proper dressing fuoye",
-      "coverage of body fuoye",
-      "what does modesty mean fuoye",
-      "dress code modesty policy",
-      "covering sensitive areas fuoye"
+      "coverage body fuoye",
+      "modesty policy fuoye",
+      "covering sensitive areas fuoye",
+      "dress code modesty"
     ],
     "question": "What does the dress code say about modesty and decency?",
     "answer": "The FUOYE dress code places a strong emphasis on modesty and decency, which are core values of the university expressed through its motto — 'Innovation and Character for National Transformation'.\n\nModesty in dressing means:\n• All clothing must adequately cover sensitive parts of the body including the thigh, chest, abdomen, and navel\n• Clothing should not be transparent, tight-fitting, or revealing in any way\n• Students should dress in a way that reflects respect for themselves, other students, and the academic environment\n• Cleanliness and neatness are required at all times"
@@ -870,13 +766,12 @@
       "colored hair fuoye",
       "tinted hair fuoye",
       "dyed hair fuoye",
-      "hair color fuoye",
+      "hair dye fuoye",
       "blonde hair fuoye",
       "hair highlights fuoye",
-      "hair dye fuoye",
-      "can i dye my hair fuoye",
       "hair coloring fuoye",
-      "is colored hair allowed fuoye"
+      "dye hair fuoye",
+      "colored hair allowed fuoye"
     ],
     "question": "Can I have colored or tinted hair at FUOYE?",
     "answer": "No. Both male and female students are prohibited from having colored or tinted hair at FUOYE.\n\n• Male students: Colored hair of any shade is strictly prohibited\n• Female students: Tinted hair is prohibited; however, natural-looking weaves, wigs, and braids are permitted as long as they are neat, well-maintained, and free from inscriptions or obvious artificial coloring"
@@ -887,12 +782,12 @@
       "neat hair fuoye",
       "well combed hair fuoye",
       "hair grooming fuoye",
-      "must hair be neat",
       "tidy hair fuoye",
       "unkempt hair fuoye",
       "messy hair fuoye",
-      "hair neatness policy fuoye",
-      "grooming standards fuoye"
+      "hair neatness fuoye",
+      "grooming standards hair fuoye",
+      "hair neatness policy"
     ],
     "question": "Must my hair be neat and well-combed at FUOYE?",
     "answer": "Yes. All students at FUOYE are expected to maintain neat and well-combed hair at all times while on campus.\n\nUnkempt, messy, or poorly maintained hair is not acceptable under the university's dress code policy. This requirement applies to both male and female students, regardless of hairstyle type."
@@ -902,13 +797,12 @@
     "keywords": [
       "hide identity clothing fuoye",
       "face covering fuoye",
-      "identity hidden by clothing",
-      "identification in exam hall",
-      "mask on campus fuoye",
+      "identity hidden clothing fuoye",
+      "mask campus fuoye",
       "covered face fuoye",
-      "can i cover my face fuoye",
-      "dressing that hides identity",
-      "identity verification fuoye"
+      "clothing hides identity",
+      "identity verification dressing fuoye",
+      "conceal identity fuoye"
     ],
     "question": "Can I wear clothing that hides my identity at FUOYE?",
     "answer": "Students should not dress in a way that conceals or hides their identity on campus.\n\nHowever, students who dress according to their religious dictates (such as wearing a full face veil) are required to make themselves available for identity verification when necessary — particularly in:\n• Examination halls\n• Laboratories\n• Libraries\n• Any other situations where identification is required by university staff or security"
@@ -918,14 +812,13 @@
     "keywords": [
       "obscene clothing fuoye",
       "offensive clothing fuoye",
-      "clothes with bad messages fuoye",
-      "obscene arm-bands",
-      "caps with bad messages",
-      "scarfs with messages fuoye",
-      "subliminal messages clothing",
-      "inappropriate text on clothes",
+      "clothes bad messages fuoye",
+      "obscene arm bands fuoye",
+      "caps bad messages fuoye",
+      "scarfs messages fuoye",
+      "subliminal messages clothing fuoye",
       "offensive print fuoye",
-      "can i wear offensive clothing"
+      "offensive text clothes fuoye"
     ],
     "question": "Can I wear clothes with obscene or offensive messages at FUOYE?",
     "answer": "No. Clothing items, arm-bands, caps, or scarfs that carry obscene, offensive, or subliminal messages are strictly prohibited at FUOYE.\n\nAll clothing worn on campus must be free from any printed text, graphics, or symbols that are offensive, indecent, or contrary to the university's values of character and decency."
@@ -939,10 +832,9 @@
       "unkempt clothes fuoye",
       "untidy clothes fuoye",
       "messy clothes fuoye",
-      "cleanliness dress code fuoye",
-      "can i wear dirty clothes",
-      "can i wear rumpled clothes",
-      "neatness dress code"
+      "dirty clothing campus fuoye",
+      "rumpled clothing fuoye",
+      "neatness clothing fuoye"
     ],
     "question": "Can I wear rumpled or dirty clothes to campus?",
     "answer": "No. Rumpled, wrinkled, or dirty clothes are prohibited under the FUOYE dress code policy.\n\nThe dress code explicitly requires that all students maintain cleanliness and neatness in their appearance at all times. Coming to campus in dirty or poorly maintained clothing is considered a violation of the dress code and may result in disciplinary action."
@@ -955,9 +847,9 @@
       "graduation ceremony dress fuoye",
       "formal events dress fuoye",
       "official events dress fuoye",
-      "what to wear for graduation fuoye",
-      "what to wear for convocation fuoye",
-      "dress for university events"
+      "graduation dress fuoye",
+      "convocation dress code",
+      "dress university events fuoye"
     ],
     "question": "What should I wear for university ceremonies and events?",
     "answer": "For all official university ceremonies and events — including convocation, matriculation, and other formal occasions — students must dress decently and in full compliance with the university dress code.\n\nThe principles of cleanliness, neatness, modesty, and decency must be upheld. Students are expected to present themselves in a manner that reflects the dignity and values of the university during all official occasions."
@@ -965,16 +857,14 @@
   {
     "id": 51,
     "keywords": [
-      "what is a carryover course",
       "carryover course meaning",
+      "what is carryover course",
       "define carryover course",
+      "carryover definition",
+      "carry over course explained",
+      "carryover university meaning",
       "what does carryover mean",
-      "carryover explained",
-      "meaning of carry over",
-      "what is carry over in university",
-      "carryover definition university",
-      "carry over course definition",
-      "explain carryover"
+      "carryover course definition"
     ],
     "question": "What exactly is a carryover course?",
     "answer": "A carryover course is any course that a student failed in a previous semester and is required to repeat in the corresponding semester of the following academic year. For example, if you fail a first-semester course, you must retake it during the first semester of the next academic year — not the second semester.\n\nCarryover courses are a normal part of university academic life, but they must be managed carefully because they affect your CGPA and can delay your graduation if not cleared promptly."
@@ -982,15 +872,14 @@
   {
     "id": 52,
     "keywords": [
-      "how many carryover courses",
-      "maximum carryover allowed",
       "carryover limit",
-      "how many courses can i carry over",
+      "maximum carryover courses",
       "carryover course limit",
       "too many carryovers",
       "carryover restriction",
-      "number of carryovers allowed",
-      "maximum failed courses"
+      "number carryovers allowed",
+      "maximum failed courses allowed",
+      "how many carryovers permitted"
     ],
     "question": "Is there a limit to how many carryover courses I can have?",
     "answer": "Yes. Most departments set a maximum number of carryover credit units a student may carry at any one time. Exceeding this limit may result in the student being required to withdraw from the university or repeat an entire academic level.\n\nThe specific limit varies by department and faculty, so you should consult your departmental handbook or speak to your academic adviser to confirm the carryover unit limit applicable to your programme."
@@ -999,14 +888,13 @@
     "id": 53,
     "keywords": [
       "register carryover course",
-      "how to register carryover",
-      "signing up for carryover",
+      "how register carryover",
       "enroll carryover course",
-      "how do i carry over a course",
       "carryover registration process",
       "registering failed course",
-      "how to retake a course",
-      "adding carryover to registration"
+      "retake course portal",
+      "adding carryover registration",
+      "sign up carryover course"
     ],
     "question": "How do I register a carryover course?",
     "answer": "Carryover courses are registered the same way as regular courses during the course registration period each semester. To register a carryover course:\n\n1. Log into the student portal\n2. Navigate to the Course Registration section\n3. Select the corresponding semester in which the course is offered\n4. Add the carryover course to your registration along with your current level courses\n5. Ensure the total units (carryover + current courses) do not exceed the maximum of 24 units per semester\n\nConsult your academic adviser before registration to plan your carryover courses effectively."
@@ -1015,15 +903,13 @@
     "id": 54,
     "keywords": [
       "carryover affect cgpa",
-      "does carryover affect my cgpa",
-      "carryover and cgpa",
-      "how carryover affects grade",
-      "carryover impact on cgpa",
-      "failed course and cgpa",
+      "carryover cgpa impact",
+      "carryover grade cgpa",
+      "failed course cgpa effect",
       "carryover reduce cgpa",
-      "does repeating a course improve cgpa",
-      "retaking course and cgpa",
-      "carryover grade replacement"
+      "repeating course cgpa",
+      "retaking course cgpa",
+      "carryover grade replacement cgpa"
     ],
     "question": "How does a carryover course affect my CGPA?",
     "answer": "Carryover courses affect your CGPA in the following ways:\n\n• The original failure (F grade = 0 GP) is included in your CGPA calculation from the semester it was first taken\n• When you retake and pass the carryover course, the new grade replaces the old grade in the CGPA calculation\n• This means passing your carryover courses will improve your CGPA over time\n\nThe faster you clear your carryover courses, the sooner your CGPA will recover. This is why it is important to prioritise carryover courses during registration."
@@ -1031,14 +917,14 @@
   {
     "id": 55,
     "keywords": [
-      "carryover and graduation",
-      "can i graduate with carryover",
+      "carryover graduation",
+      "graduate carryover courses",
       "carryover delay graduation",
-      "does carryover affect graduation",
-      "graduate with failed courses",
+      "carryover affect graduation",
+      "graduate failed courses",
       "uncleared carryover graduation",
-      "can i finish with carryover",
-      "carryover and degree",
+      "finish with carryover",
+      "carryover degree eligibility",
       "outstanding courses graduation"
     ],
     "question": "Can I graduate if I still have carryover courses?",
@@ -1047,16 +933,14 @@
   {
     "id": 56,
     "keywords": [
-      "how to calculate gpa manually",
-      "manual gpa calculation",
       "gpa calculation example",
       "step by step gpa",
-      "calculate gpa by hand",
+      "calculate gpa example",
       "gpa worked example",
-      "gpa calculation walkthrough",
-      "how to work out gpa",
-      "gpa sample calculation",
-      "practice gpa calculation"
+      "gpa walkthrough",
+      "manual gpa example",
+      "practice gpa",
+      "gpa sample"
     ],
     "question": "Can you give me a step-by-step example of how to calculate GPA?",
     "answer": "Here is a full step-by-step GPA calculation example:\n\nSuppose you registered 5 courses in a semester:\n\n| Course | Units | Grade | GP  | TCP (Units × GP) |\n|--------|-------|-------|-----|------------------|\n| CSC301 |   3   |   A   | 5.0 |       15         |\n| CSC303 |   3   |   B   | 4.0 |       12         |\n| MTH301 |   2   |   C   | 3.0 |        6         |\n| GST301 |   2   |   A   | 5.0 |       10         |\n| CSC305 |   3   |   D   | 2.0 |        6         |\n\nStep 1 — Calculate TLU:\nTLU = 3 + 3 + 2 + 2 + 3 = 13 units\n\nStep 2 — Calculate TCP:\nTCP = 15 + 12 + 6 + 10 + 6 = 49 points\n\nStep 3 — Calculate GPA:\nGPA = TCP ÷ TLU = 49 ÷ 13 = 3.77\n\nYour GPA for that semester is 3.77 (Second Class Upper range)."
@@ -1064,16 +948,14 @@
   {
     "id": 57,
     "keywords": [
-      "how to calculate cgpa manually",
       "cgpa calculation example",
       "step by step cgpa",
-      "calculate cgpa by hand",
+      "calculate cgpa example",
       "cgpa worked example",
-      "cgpa calculation walkthrough",
-      "how to work out cgpa",
-      "cgpa sample calculation",
-      "practice cgpa calculation",
-      "cgpa across multiple semesters"
+      "cgpa walkthrough",
+      "manual cgpa example",
+      "practice cgpa",
+      "cgpa sample multiple semesters"
     ],
     "question": "Can you give me a step-by-step example of how to calculate CGPA?",
     "answer": "Here is a full step-by-step CGPA calculation example across two semesters:\n\nSemester 1:\n• TLU = 15 units\n• TCP = 60 points\n• GPA = 60 ÷ 15 = 4.00\n\nSemester 2:\n• TLU = 18 units\n• TCP = 63 points\n• GPA = 63 ÷ 18 = 3.50\n\nStep 1 — Calculate CLU:\nCLU = 15 + 18 = 33 units\n\nStep 2 — Calculate CCP:\nCCP = 60 + 63 = 123 points\n\nStep 3 — Calculate CGPA:\nCGPA = CCP ÷ CLU = 123 ÷ 33 = 3.73\n\nYour CGPA after two semesters is 3.73 (Second Class Upper range).\n\nRemember: CGPA is NOT the average of your individual semester GPAs:\n(4.00 + 3.50) ÷ 2 = 3.75 — this is WRONG.\nAlways use CCP ÷ CLU for the correct result."
@@ -1081,16 +963,15 @@
   {
     "id": 58,
     "keywords": [
-      "can i improve my cgpa",
-      "how to improve cgpa",
-      "raise my cgpa",
+      "improve cgpa",
+      "raise cgpa",
       "increase cgpa",
       "boost cgpa",
       "cgpa improvement tips",
-      "how to get better cgpa",
-      "improve academic performance",
-      "ways to raise gpa",
-      "cgpa recovery"
+      "better cgpa strategies",
+      "cgpa recovery tips",
+      "ways raise cgpa",
+      "improve academic performance cgpa"
     ],
     "question": "How can I improve my CGPA?",
     "answer": "You can improve your CGPA through the following strategies:\n\n1. Pass your carryover courses — replacing F grades with passing grades has the most significant positive impact on your CGPA\n2. Score higher grades in current courses — aim for A and B grades in all registered courses\n3. Retake courses where you scored low grades — if your department allows grade replacement, retaking courses where you earned D or E grades can improve your TCP and therefore your CGPA\n4. Register appropriate units — do not overload yourself with too many courses if it means you cannot perform well in all of them\n5. Seek academic support — visit your academic adviser, attend tutorials, and form study groups\n\nConsistency across all semesters is the most reliable path to a strong CGPA."
@@ -1098,16 +979,14 @@
   {
     "id": 59,
     "keywords": [
-      "what grade is a pass",
       "minimum passing grade",
-      "what is the pass mark",
-      "pass mark university",
-      "minimum score to pass",
+      "pass mark fuoye",
+      "minimum score pass",
       "passing score fuoye",
-      "what score do i need to pass",
-      "minimum grade to pass a course",
+      "score needed pass",
+      "minimum grade pass course",
       "what is considered passing",
-      "pass or fail grade"
+      "pass fail grade threshold"
     ],
     "question": "What is the minimum grade required to pass a course?",
     "answer": "At FUOYE, the minimum passing grade for a course is E, which corresponds to a score of 40 to 44 marks and carries 1 Grade Point.\n\nHowever, be aware that:\n• An E grade (Conditional Pass) carries only 1 GP and will negatively impact your GPA if you receive it in multiple courses\n• For prerequisite (required) courses, some departments may require a minimum of a C grade before you are allowed to proceed to the next level course — check your departmental guidelines\n• A score of 39 or below is graded F (0 GP) and is a failure requiring a carryover"
@@ -1115,15 +994,15 @@
   {
     "id": 60,
     "keywords": [
-      "what does grade E mean",
+      "grade e meaning",
       "conditional pass meaning",
-      "grade E fuoye",
-      "what is a conditional pass",
+      "grade e fuoye",
+      "what is conditional pass",
       "e grade university",
-      "is grade E a pass",
       "conditional pass explained",
-      "40 to 44 grade",
-      "grade e consequences"
+      "40 to 44 marks grade",
+      "grade e consequence",
+      "e grade impact"
     ],
     "question": "What does a grade of E (Conditional Pass) mean?",
     "answer": "A grade of E at FUOYE means Conditional Pass. It is awarded for scores between 40 and 44 marks and carries 1 Grade Point.\n\nWhat Conditional Pass means:\n• The course is considered passed and does not need to be retaken as a carryover\n• However, the 1 GP it contributes to your TCP is very low and will significantly pull down your GPA and CGPA\n• For courses that are prerequisites, your department may require a grade higher than E before you can proceed to the dependent course — always confirm with your department\n\nIt is strongly advisable to aim for at least a C grade (50+ marks) in all your courses."
@@ -1131,16 +1010,15 @@
   {
     "id": 61,
     "keywords": [
-      "what does grade f mean",
+      "grade f meaning",
       "grade f fuoye",
-      "f grade meaning",
-      "fail grade university",
-      "0 grade points",
-      "score below 40",
-      "zero grade points",
+      "f grade university",
+      "zero grade points course",
+      "score below 40 fuoye",
       "failing grade fuoye",
-      "what happens if i get f",
-      "f grade consequences"
+      "f grade consequence",
+      "what happens get f grade",
+      "fail grade impact"
     ],
     "question": "What does a grade of F mean and what are the consequences?",
     "answer": "A grade of F at FUOYE means Fail. It is awarded for scores below 40 marks (0 to 39) and carries 0 Grade Points.\n\nConsequences of an F grade:\n• The course contributes 0 GP to your TCP, significantly lowering your GPA and CGPA\n• The course becomes a carryover and must be retaken in the corresponding semester of the next academic year\n• If the failed course is a prerequisite, you cannot take higher-level courses that depend on it until you pass it\n• Accumulating too many F grades can place you on academic probation or lead to withdrawal from the university"
@@ -1148,15 +1026,14 @@
   {
     "id": 62,
     "keywords": [
-      "difference between gpa and cgpa",
-      "gpa vs cgpa",
-      "gpa and cgpa difference",
-      "how is gpa different from cgpa",
-      "gpa or cgpa which is better",
-      "compare gpa and cgpa",
+      "difference gpa cgpa",
       "gpa versus cgpa",
-      "when to use gpa vs cgpa",
-      "gpa cgpa distinction"
+      "gpa cgpa distinction",
+      "gpa cgpa comparison",
+      "gpa cgpa different",
+      "compare gpa cgpa",
+      "gpa cgpa contrast",
+      "gpa per semester cgpa overall"
     ],
     "question": "What is the difference between GPA and CGPA?",
     "answer": "GPA and CGPA are related but measure different things:\n\nGPA (Grade Point Average):\n• Measures your academic performance in ONE specific semester\n• Calculated as: GPA = TCP ÷ TLU (for that semester only)\n• Changes every semester based on your performance\n• Does not determine your final degree classification on its own\n\nCGPA (Cumulative Grade Point Average):\n• Measures your overall academic performance across ALL semesters\n• Calculated as: CGPA = CCP ÷ CLU (across all semesters to date)\n• Accumulates and changes gradually over your entire programme\n• Is the final figure used to determine your degree classification at graduation\n\nIn summary: GPA is per semester; CGPA is your running total across your entire programme."
@@ -1164,16 +1041,15 @@
   {
     "id": 63,
     "keywords": [
-      "what is exam malpractice",
-      "examination malpractice meaning",
-      "define exam malpractice",
-      "what counts as cheating in exam",
-      "exam fraud",
-      "cheating in examination",
-      "what is academic dishonesty",
-      "malpractice in exam hall",
-      "exam misconduct definition",
-      "types of exam malpractice"
+      "exam malpractice meaning",
+      "examination malpractice",
+      "cheating exam definition",
+      "exam fraud definition",
+      "academic dishonesty exam",
+      "malpractice exam hall",
+      "types exam malpractice",
+      "exam misconduct types",
+      "what counts cheating exam"
     ],
     "question": "What is examination malpractice and what forms does it take?",
     "answer": "Examination malpractice refers to any dishonest or fraudulent act carried out by a student to gain an unfair advantage during an examination. It is a serious academic offence at FUOYE.\n\nCommon forms of examination malpractice include:\n• Copying from another student's answer script\n• Bringing unauthorized materials (textbooks, notes, written papers) into the exam hall\n• Using a mobile phone or electronic device during an examination\n• Impersonating another student or allowing someone to write an exam on your behalf\n• Communicating with other students during the examination\n• Smuggling answers into the exam hall in any form\n• Attempting to bribe or threaten an invigilator\n\nAll forms of malpractice are subject to severe disciplinary action."
@@ -1181,15 +1057,15 @@
   {
     "id": 64,
     "keywords": [
-      "consequences of exam malpractice",
-      "punishment for cheating in exam",
-      "penalty for exam malpractice",
-      "what happens if caught cheating",
-      "disciplinary action cheating",
-      "expelled for cheating",
-      "exam fraud consequences",
-      "malpractice penalty fuoye",
-      "cheating punishment university"
+      "malpractice consequences",
+      "punishment cheating exam",
+      "penalty malpractice fuoye",
+      "caught cheating exam",
+      "expelled cheating fuoye",
+      "exam fraud consequences fuoye",
+      "malpractice penalty",
+      "cheating punishment fuoye",
+      "disciplinary cheating exam"
     ],
     "question": "What are the consequences of examination malpractice?",
     "answer": "Examination malpractice is treated as a very serious offence at FUOYE. Consequences may include:\n\n• Immediate cancellation of the examination paper in which the malpractice occurred\n• Cancellation of all examination results for that semester\n• Suspension from the university for a specified period\n• Outright expulsion from the university for severe or repeated offences\n• A permanent record of the offence on the student's academic file\n\nStudents found guilty of malpractice are referred to the university's disciplinary committee, which investigates the matter and determines the appropriate sanction. The severity of the punishment depends on the nature and extent of the offence."
@@ -1197,15 +1073,15 @@
   {
     "id": 65,
     "keywords": [
-      "what to bring to exam",
-      "items allowed in exam hall",
-      "what can i take to exam",
+      "bring exam hall",
+      "items exam hall",
+      "take to exam",
       "exam hall requirements",
-      "items needed for exam",
+      "items needed exam",
       "exam preparation items",
-      "what is required for exam",
+      "required exam entry",
       "exam entry requirements",
-      "bring to examination hall"
+      "what carry exam"
     ],
     "question": "What items should I bring to an examination?",
     "answer": "You should bring the following items to every examination:\n\nRequired items:\n• Your valid student ID card — this is mandatory for identity verification\n• Your examination timetable showing the course, venue, and time\n• Approved writing materials (pens — blue or black ink, pencils for diagrams)\n• Mathematical instruments (ruler, calculator, compass) if permitted for that course\n\nProhibited items (do NOT bring these into the exam hall):\n• Mobile phones or any electronic communication device\n• Smart watches or earphones\n• Textbooks, printed notes, or handwritten materials\n• Any unauthorized equipment\n\nAlways check with your lecturer if a calculator or any specific tool is permitted for a particular exam."
@@ -1213,15 +1089,14 @@
   {
     "id": 66,
     "keywords": [
-      "what happens after exam",
-      "after writing exam",
+      "after exam finish",
       "submitting exam script",
-      "handing in exam paper",
+      "handing exam paper",
       "exam script submission",
-      "finishing examination",
-      "leaving exam hall",
-      "exam script collection",
-      "after finishing exam paper"
+      "finishing examination steps",
+      "leaving exam hall process",
+      "after finishing exam",
+      "submit answer booklet"
     ],
     "question": "What should I do after finishing my examination?",
     "answer": "After completing your examination, follow these steps:\n\n1. Review your answers — use any remaining time to go over your responses carefully\n2. Ensure your details are correct — confirm your name, matriculation number, course code, and department are clearly written on the answer booklet\n3. Do not leave the hall early without permission — check the rules for early departure with the invigilator\n4. Submit your answer booklet — hand your script directly to the invigilator; do not leave it on the desk unattended\n5. Collect your personal belongings — retrieve items left outside the hall after submitting your script\n6. Do not discuss answers loudly outside — be respectful of students who may still be writing"
@@ -1229,14 +1104,14 @@
   {
     "id": 67,
     "keywords": [
-      "can i leave exam hall early",
-      "leaving exam before time",
-      "early exit exam hall",
-      "finish exam before time",
-      "exit examination early",
-      "done with exam early",
-      "can i go before exam ends",
-      "early departure exam"
+      "leave exam hall early",
+      "exit exam before time",
+      "early departure exam hall",
+      "finish exam early leave",
+      "go before exam ends",
+      "exit examination early permission",
+      "leave hall before time up",
+      "done exam early departure"
     ],
     "question": "Can I leave the examination hall before time is up?",
     "answer": "In most cases, students are not permitted to leave the examination hall before the minimum required time has elapsed. The standard rule is:\n\n• Students may not leave during the first 30 minutes of an examination\n• After 30 minutes, students who have completed their paper may request permission from the invigilator to leave\n• Once you leave the hall, you are not permitted to re-enter\n• Your script must be submitted to the invigilator before you leave — you cannot take it with you\n\nAlways observe the specific instructions given by the chief invigilator for each examination."
@@ -1244,14 +1119,14 @@
   {
     "id": 68,
     "keywords": [
-      "can i use calculator in exam",
-      "calculator allowed in exam",
+      "calculator exam fuoye",
+      "calculator allowed exam",
       "scientific calculator exam",
-      "is calculator permitted",
-      "electronic calculator exam",
-      "calculator policy exam",
-      "calculator in examination hall",
-      "programmable calculator exam"
+      "calculator permitted exam",
+      "programmable calculator exam",
+      "calculator policy exam fuoye",
+      "calculator examination hall",
+      "use calculator exam"
     ],
     "question": "Are calculators allowed in examinations?",
     "answer": "The use of a calculator in an examination depends on the specific course and the instructions given by the lecturer or the examination officer.\n\n• For mathematics, engineering, and science-based courses, non-programmable scientific calculators are generally permitted unless stated otherwise\n• Programmable calculators and calculators with communication capabilities are typically prohibited\n• For arts, humanities, and social science courses, calculators are generally not required or permitted\n\nAlways check with your lecturer before the examination date to confirm whether a calculator is allowed and what type is acceptable. Do not bring a calculator to an exam where it has not been explicitly permitted."
@@ -1259,16 +1134,15 @@
   {
     "id": 69,
     "keywords": [
-      "missing exam",
+      "unable sit exam",
       "could not write exam",
-      "did not sit for exam",
-      "unable to attend exam",
-      "absent from examination",
-      "missed my examination",
-      "sick during exam",
-      "emergency during exam",
-      "what to do if i miss exam",
-      "deferred exam application"
+      "did not attend exam",
+      "absent examination emergency",
+      "missed examination paper",
+      "sick during examination",
+      "emergency exam absence",
+      "miss exam what do",
+      "deferred exam application steps"
     ],
     "question": "What should I do if I was unable to sit for an examination?",
     "answer": "If you were unable to sit for an examination due to illness, a family emergency, or another serious reason, take the following steps immediately:\n\n1. Notify your department — inform your Head of Department or course lecturer as soon as possible, ideally within 24 to 48 hours of the missed exam\n2. Gather documentation — obtain a medical report from a recognized hospital or the university health center, or any other relevant official document supporting your reason for absence\n3. Apply for a Deferred Examination — submit a formal application for a deferred (postponed) examination to your department along with your supporting documents\n4. Await approval — the department will review your application and inform you of the outcome\n\nLate applications without valid documentation are unlikely to be approved. Act quickly."
@@ -1276,16 +1150,15 @@
   {
     "id": 70,
     "keywords": [
-      "what is a deferred examination",
-      "deferred exam meaning",
-      "define deferred exam",
-      "what is deferred examination",
+      "deferred examination meaning",
+      "what is deferred exam",
       "deferred exam explained",
       "postponed examination",
       "makeup exam fuoye",
       "supplementary exam fuoye",
-      "can i take exam later",
-      "rescheduled exam"
+      "take exam later fuoye",
+      "rescheduled exam fuoye",
+      "deferred exam definition"
     ],
     "question": "What is a deferred examination?",
     "answer": "A deferred examination is a special examination granted to a student who was unable to sit for a scheduled examination due to a genuine and documented emergency such as illness, bereavement, or another serious circumstance beyond the student's control.\n\nKey points about deferred examinations:\n• They are not automatically given — you must apply and have your application approved\n• Supporting documentation (e.g., a medical report) is mandatory\n• The deferred exam is typically held separately from the regular examination period, at a date determined by the department\n• A student who is granted a deferred exam and then fails to attend without a valid reason may not be granted another opportunity"
@@ -1293,15 +1166,15 @@
   {
     "id": 71,
     "keywords": [
-      "what is an invigilator",
       "invigilator meaning",
-      "define invigilator",
-      "who is an invigilator",
-      "exam invigilator role",
-      "what does an invigilator do",
+      "who is invigilator",
+      "invigilator role",
       "invigilator duties",
       "examination supervisor",
-      "exam monitor"
+      "exam monitor role",
+      "invigilator definition",
+      "define invigilator",
+      "what does invigilator do"
     ],
     "question": "Who is an invigilator and what is their role?",
     "answer": "An invigilator (also called an examination supervisor) is a staff member appointed by the university to supervise and monitor students during an examination.\n\nThe responsibilities of an invigilator include:\n• Distributing and collecting examination scripts and question papers\n• Verifying the identity of students before the examination begins\n• Maintaining order and silence in the examination hall\n• Monitoring students to prevent and detect examination malpractice\n• Assisting students with legitimate procedural questions (not academic content)\n• Recording any incidents of malpractice and reporting them to the appropriate authority\n\nStudents must follow all instructions given by the invigilator during an examination."
@@ -1310,13 +1183,12 @@
     "id": 72,
     "keywords": [
       "open book exam",
-      "what is open book examination",
-      "open book exam meaning",
+      "open book examination",
       "allowed materials open book",
-      "open book test",
-      "take home exam",
-      "can i use notes in exam",
+      "open book test fuoye",
+      "notes exam allowed",
       "open book exam rules",
+      "reference materials exam",
       "open book examination fuoye"
     ],
     "question": "What is an open book examination?",
@@ -1325,14 +1197,14 @@
   {
     "id": 73,
     "keywords": [
-      "dress code for exam",
-      "what to wear to exam",
-      "can i wear anything to exam",
-      "dress code in examination hall",
-      "examination hall dressing",
-      "wearing to examination",
-      "appropriate dress for exam",
-      "exam hall dress code"
+      "dress code exam hall",
+      "wear to exam fuoye",
+      "exam hall dress code",
+      "dress examination hall",
+      "appropriate dress exam",
+      "exam dressing fuoye",
+      "dress code examination fuoye",
+      "wear examination hall fuoye"
     ],
     "question": "Is there a dress code for entering the examination hall?",
     "answer": "Yes. The university's general dress code policy applies in the examination hall just as it does everywhere else on campus.\n\nStudents must:\n• Dress decently, modestly, and neatly when attending any examination\n• Wear proper footwear — slippers and flip-flops are not permitted\n• Avoid tight-fitting, transparent, or revealing clothing\n• Not wear any items that could conceal unauthorized materials (e.g., excessively large or baggy clothing)\n\nStudents who dress in violation of the dress code may be refused entry to the examination hall. Always ensure your appearance complies with the FUOYE dress code before attending any examination."
@@ -1340,15 +1212,15 @@
   {
     "id": 74,
     "keywords": [
-      "phone in exam hall",
+      "phone exam hall fuoye",
       "mobile phone examination",
-      "can i bring phone to exam",
-      "phone policy examination",
+      "bring phone exam",
+      "phone policy exam fuoye",
       "phone not allowed exam",
-      "smart phone exam hall",
-      "electronic device exam",
-      "phone during exam",
-      "mobile allowed in exam"
+      "smartphone exam hall",
+      "electronic device exam fuoye",
+      "phone during exam fuoye",
+      "mobile exam hall fuoye"
     ],
     "question": "Can I bring my mobile phone into the examination hall?",
     "answer": "No. Mobile phones and all other electronic communication devices are strictly prohibited inside the examination hall.\n\nThis includes:\n• Smartphones\n• Feature phones (ordinary call and text phones)\n• Smart watches\n• Wireless earphones or earbuds\n• Tablets or any internet-enabled device\n\nAll such devices must be switched off and left outside the examination hall or surrendered to the invigilator before the exam begins. Being found with a mobile phone inside the exam hall — even if you are not using it — can be treated as examination malpractice, regardless of your intention."
@@ -1356,16 +1228,15 @@
   {
     "id": 75,
     "keywords": [
-      "number of exams per day",
-      "two exams same day",
       "exam clash",
+      "two exams same time",
+      "examination timetable clash",
+      "conflict exam schedule",
+      "overlapping exams",
+      "exams clash fuoye",
       "two papers same time",
-      "examination clash",
-      "conflict in exam timetable",
-      "same time exams",
-      "clash in examination schedule",
-      "what to do if exams clash",
-      "overlapping exams"
+      "clashing exam papers",
+      "resolve exam clash"
     ],
     "question": "What should I do if two of my exams are scheduled at the same time?",
     "answer": "An examination clash — where two of your registered courses are scheduled for the same date and time — is a timetable conflict that must be reported and resolved before the examination period begins.\n\nSteps to take if your exams clash:\n1. Identify the clash early — check your full examination timetable as soon as it is published\n2. Report it immediately — notify your class representative and your departmental examination officer or Head of Department as soon as you discover the conflict\n3. Do not wait — clashes must be reported well before the examination date so arrangements can be made\n4. The department will liaise with the examination office to reschedule one of the conflicting papers\n\nDo not attempt to sit for one exam and skip the other — report the clash through the proper channels."
@@ -1373,14 +1244,14 @@
   {
     "id": 76,
     "keywords": [
-      "registration without adviser approval",
-      "can i register without adviser",
-      "adviser signature for registration",
-      "course registration approval",
-      "do i need adviser to register",
       "adviser approval registration",
-      "register courses without adviser",
-      "academic adviser registration role"
+      "register without adviser",
+      "adviser signature registration",
+      "registration approval adviser",
+      "need adviser register",
+      "adviser role registration",
+      "academic adviser registration",
+      "register courses adviser approval"
     ],
     "question": "Do I need my academic adviser's approval before registering courses?",
     "answer": "Yes. In most departments, students are required to consult their assigned academic adviser before completing their course registration each semester.\n\nYour academic adviser will:\n• Review the courses you intend to register\n• Confirm that your selected courses are appropriate for your level and programme requirements\n• Advise on the management of carryover courses alongside your current level courses\n• Ensure you are not exceeding the maximum unit limit\n• Sign or approve your registration form where required\n\nRegistering courses without your adviser's knowledge or approval may result in your registration being invalid or reversed. Always seek your adviser's guidance before finalising your registration."
@@ -1388,15 +1259,14 @@
   {
     "id": 77,
     "keywords": [
-      "carry over prerequisite course",
-      "prerequisite and carryover",
-      "failed prerequisite",
-      "carryover prerequisite meaning",
-      "must pass before moving on",
-      "required course failed",
-      "prerequisite failed carryover",
-      "blocked by prerequisite carryover",
-      "cannot take next course prerequisite"
+      "carryover prerequisite",
+      "prerequisite carryover course",
+      "failed prerequisite carryover",
+      "blocked prerequisite carryover",
+      "cannot take next course carryover",
+      "must pass prerequisite carryover",
+      "prerequisite failed next level",
+      "carryover blocks progression"
     ],
     "question": "What happens if my carryover course is a prerequisite for another course?",
     "answer": "If your carryover course is a prerequisite (a required course that must be passed before taking a higher-level course that depends on it), the following applies:\n\n• You will not be permitted to register for the higher-level dependent course until you have passed the prerequisite carryover\n• For example, if CSC 301 is a prerequisite for CSC 401, you cannot register CSC 401 until you have passed CSC 301\n• This can cause a chain effect that delays your academic progression significantly\n\nThis is why it is critical to prioritize prerequisite carryover courses above all others during registration. Speak to your academic adviser to understand which of your carryover courses are prerequisites."
@@ -1404,15 +1274,14 @@
   {
     "id": 78,
     "keywords": [
-      "elective course in cgpa",
-      "does elective affect cgpa",
-      "elective grade cgpa",
-      "elective course and grade",
-      "elective in degree classification",
-      "elective course grade impact",
-      "does failing elective affect me",
-      "elective failure consequence",
-      "elective pass or fail"
+      "elective cgpa impact",
+      "elective degree classification",
+      "elective grade classification",
+      "failing elective consequence",
+      "elective pass fail result",
+      "elective course cgpa effect",
+      "elective count classification",
+      "does elective affect degree"
     ],
     "question": "Do elective courses affect my CGPA or degree classification?",
     "answer": "This depends on how your department classifies elective courses:\n\n• In most programmes, elective course grades do NOT count toward your degree classification CGPA — they are taken for breadth of knowledge but are excluded from the classification calculation\n• However, if you register and fail an elective course, it still becomes a carryover that you must clear before graduation\n• The elective course's units may still count toward your TLU and its grade points may still contribute to your general GPA calculation depending on departmental policy\n\nAlways confirm with your department whether elective grades are included or excluded from your degree classification CGPA, as this varies between programmes."
@@ -1420,15 +1289,14 @@
   {
     "id": 79,
     "keywords": [
-      "what is a semester",
-      "semester meaning",
-      "define semester",
-      "how long is a semester",
+      "what is semester",
+      "semester meaning fuoye",
+      "semester duration fuoye",
       "first semester second semester",
-      "semester duration",
-      "semester explained",
-      "how many semesters in a year",
-      "academic semester"
+      "academic year structure",
+      "how long semester fuoye",
+      "semesters per year",
+      "academic semester fuoye"
     ],
     "question": "What is a semester and how is the academic year structured?",
     "answer": "A semester is one of the two main academic periods that make up a full academic year at FUOYE.\n\nStructure:\n• Each academic year is divided into two semesters:\n  - First Semester: typically runs from around October to February\n  - Second Semester: typically runs from around February to July\n• Each semester spans approximately 15 to 17 weeks of lectures, followed by an examination period\n• Course registration is done at the beginning of each semester\n• GPA is calculated at the end of each semester; CGPA is cumulative across all semesters\n\nThe exact dates for each semester are published in the university's academic calendar at the start of each academic year."
@@ -1436,21 +1304,14 @@
   {
     "id": 80,
     "keywords": [
-      "grade point for A",
-      "grade point for B",
-      "grade point for C",
-      "grade point for D",
-      "grade point for E",
-      "grade point for F",
-      "what grade point is A",
-      "score of 70",
-      "score of 60",
-      "score of 50",
-      "score of 45",
-      "score of 40",
-      "what gp does each grade carry",
-      "grade to gp conversion",
-      "how many points is an A"
+      "grade point letter grade",
+      "gp each grade",
+      "grade point A B C D E F",
+      "letter grade gp value",
+      "gp conversion grade",
+      "how many points grade carries",
+      "grade point per letter",
+      "points each letter grade"
     ],
     "question": "How many grade points does each letter grade carry?",
     "answer": "Each letter grade at FUOYE carries a specific number of Grade Points (GP) used in calculating your GPA and CGPA:\n\n• A (70 – 100 marks) = 5 Grade Points — Excellent\n• B (60 – 69 marks) = 4 Grade Points — Very Good\n• C (50 – 59 marks) = 3 Grade Points — Good\n• D (45 – 49 marks) = 2 Grade Points — Pass\n• E (40 – 44 marks) = 1 Grade Point  — Conditional Pass\n• F (0  – 39  marks) = 0 Grade Points — Fail\n\nThe higher your grade in each course, the more GP it contributes to your TCP, and the higher your GPA and CGPA will be."
@@ -1458,16 +1319,14 @@
   {
     "id": 81,
     "keywords": [
-      "what score do i need for first class",
-      "score needed first class",
-      "how to get first class",
-      "cgpa for first class",
+      "first class degree requirements",
+      "achieve first class fuoye",
+      "cgpa first class fuoye",
       "4.50 cgpa first class",
-      "what grades for first class",
-      "achieving first class",
-      "first class requirement cgpa",
-      "can i still get first class",
-      "first class honours requirement"
+      "grades first class fuoye",
+      "first class honours requirement",
+      "get first class fuoye",
+      "first class cgpa needed"
     ],
     "question": "What do I need to achieve a First Class degree?",
     "answer": "To graduate with a First Class Honours degree at FUOYE, you must achieve a final CGPA of 4.50 or above (on a 5.00 scale).\n\nTo consistently maintain a CGPA of 4.50 and above, you generally need to:\n• Score A (70+) in the majority of your courses throughout your programme\n• Avoid F grades entirely — an F (0 GP) has a severe negative impact on CGPA\n• Clear all carryover courses as quickly as possible\n• Aim for at least a B (60+) in courses where achieving an A is difficult\n• Maintain strong performance across every semester — CGPA is cumulative and early poor performance takes many semesters to recover from\n\nFirst Class is achievable with consistent effort and strong academic discipline from your first year."
@@ -1475,16 +1334,14 @@
   {
     "id": 82,
     "keywords": [
-      "course registration form",
       "print registration form",
-      "registration slip",
+      "registration slip portal",
       "course form printout",
       "registration printout",
-      "how to print registration",
-      "download registration form",
-      "registration receipt",
-      "proof of registration",
-      "course registration document"
+      "download registration slip",
+      "registration receipt portal",
+      "proof registration portal",
+      "registration document printout"
     ],
     "question": "How do I print or obtain proof of my course registration?",
     "answer": "After completing your course registration on the student portal, you should print or save a copy of your registration slip as proof of registration. To do this:\n\n1. Log into the student portal\n2. Navigate to the Course Registration section\n3. Select the completed registration for the current semester\n4. Click 'Print' or 'Download' to generate your registration slip\n5. Keep a physical or digital copy of this slip safely\n\nYour registration slip is an important document. It serves as proof that you are officially registered for your courses and may be required when reporting missing results, resolving portal errors, or confirming exam eligibility."
@@ -1492,14 +1349,14 @@
   {
     "id": 83,
     "keywords": [
-      "can i register a course from another department",
-      "cross department course",
+      "register course another department",
+      "cross department course registration",
       "inter department registration",
       "register outside department",
-      "course from another faculty",
-      "can i take courses from other departments",
-      "outside department course registration",
-      "register course different department"
+      "course another faculty",
+      "courses other departments",
+      "outside department registration",
+      "different department course"
     ],
     "question": "Can I register courses from another department?",
     "answer": "Yes, in some cases students may be permitted to register courses from other departments. This is typically possible under the following conditions:\n\n• The course is listed as an approved elective for your programme\n• Your academic adviser and the relevant departmental authority grant approval\n• The course does not cause your total registered units to exceed the 24-unit maximum\n• The offering department has space available and permits external students\n\nCross-departmental course registration must always be approved before you add the course to your registration. Registering a course from another department without proper approval may result in your registration for that course being cancelled."
@@ -1507,14 +1364,14 @@
   {
     "id": 84,
     "keywords": [
-      "can i wear makeup to campus",
-      "makeup at fuoye",
-      "is makeup allowed fuoye",
+      "makeup fuoye",
+      "makeup campus fuoye",
+      "makeup allowed fuoye",
       "cosmetics fuoye",
       "heavy makeup fuoye",
-      "makeup dress code",
       "foundation lipstick fuoye",
-      "beauty products fuoye"
+      "beauty products fuoye",
+      "makeup dress code fuoye"
     ],
     "question": "Is makeup allowed under the FUOYE dress code?",
     "answer": "The FUOYE dress code does not explicitly prohibit the use of makeup. However, the general principles of modesty, decency, and appropriateness apply.\n\nStudents who wear makeup are expected to:\n• Keep it modest and appropriate for an academic environment\n• Avoid excessively dramatic or costume-like makeup that may be considered inappropriate for campus\n• Ensure that their overall appearance — including makeup — reflects the dignity and values of the university\n\nMakeup should complement a neat and decent appearance, not contradict it. When in doubt, keep it simple and professional."
@@ -1522,14 +1379,14 @@
   {
     "id": 85,
     "keywords": [
-      "can i wear hat to campus",
-      "cap allowed fuoye",
-      "wearing hat in class",
+      "hat campus fuoye",
+      "cap campus fuoye",
+      "wearing hat class fuoye",
       "hat policy fuoye",
       "headwear fuoye",
-      "can i wear a cap in class",
-      "wearing cap in lecture hall",
-      "hat in examination hall"
+      "cap lecture hall fuoye",
+      "hat examination hall fuoye",
+      "cap exam fuoye"
     ],
     "question": "Can I wear a hat or cap in class and in the examination hall?",
     "answer": "Wearing hats, caps, or head coverings in classrooms and examination halls is generally discouraged unless it is for religious or medical reasons.\n\nSpecific rules:\n• Caps or hats with obscene inscriptions, offensive graphics, or subliminal messages are strictly prohibited under the FUOYE dress code\n• In the examination hall, all head coverings (including caps and hats) may be required to be removed for identity verification purposes — follow the invigilator's instructions\n• Religious head coverings are permitted but the student must make themselves available for identification when required\n\nAlways ensure that any head covering worn on campus is neat, decent, and free from offensive content."
@@ -1537,15 +1394,14 @@
   {
     "id": 86,
     "keywords": [
-      "carry over how many years",
-      "how long can i carry over",
-      "carryover duration",
-      "years allowed to clear carryover",
-      "maximum years for carryover",
-      "time limit carryover",
-      "how long to clear carryover",
       "carryover time limit",
-      "extended year carryover"
+      "years clear carryover",
+      "carryover duration limit",
+      "maximum years carryover",
+      "time limit carryover fuoye",
+      "how long clear carryover",
+      "extended year carryover fuoye",
+      "years allowed carryover"
     ],
     "question": "Is there a time limit for clearing carryover courses?",
     "answer": "Yes. Students are generally not permitted to remain in the university indefinitely to clear carryover courses. Most universities, including FUOYE, set a maximum number of years within which a student must complete their programme.\n\nTypical rules:\n• For a 4-year programme, the maximum duration is usually 6 years (the standard duration plus 2 additional years)\n• For a 5-year programme, the maximum is usually 7 to 8 years\n• Students who exceed the maximum duration without completing all requirements may be required to withdraw\n\nAlways consult your departmental handbook or academic adviser for the specific maximum programme duration applicable to your course, and plan your carryover management accordingly."
@@ -1553,15 +1409,14 @@
   {
     "id": 87,
     "keywords": [
-      "when is result released",
-      "how long for results",
       "result release date",
-      "when will result come out",
-      "result upload time",
-      "when to expect results",
-      "result publication",
-      "exam result timing",
-      "when results are posted"
+      "results released fuoye",
+      "how long results fuoye",
+      "result upload time fuoye",
+      "when results posted fuoye",
+      "result publication fuoye",
+      "exam result timing fuoye",
+      "when result come out fuoye"
     ],
     "question": "When are examination results typically released?",
     "answer": "Examination results at FUOYE are typically uploaded to the student portal within four to six weeks after the end of the examination period for that semester.\n\nThe process involves:\n• Lecturers submitting scores to their departments after marking\n• Departmental results collation and verification\n• Approval by the faculty examination board\n• Final upload to the student portal by the ICT department\n\nIf your results have not appeared on the portal after six weeks, or if you notice a missing or incorrect result, visit the ICT Center at Phase 3 (opposite the Faculty of Pharmacy) to report the issue."
@@ -1569,16 +1424,15 @@
   {
     "id": 88,
     "keywords": [
-      "continuous assessment",
-      "ca score",
-      "ca mark",
+      "continuous assessment meaning",
       "what is continuous assessment",
-      "test and ca",
-      "ca contribution to final grade",
-      "coursework marks",
-      "assignment marks",
-      "ca and exam marks",
-      "continuous assessment meaning"
+      "ca score meaning",
+      "ca mark meaning",
+      "ca contribution grade",
+      "coursework marks meaning",
+      "assignment marks contribution",
+      "ca exam marks split",
+      "ca percentage grade"
     ],
     "question": "What is Continuous Assessment (CA) and how does it contribute to my final grade?",
     "answer": "Continuous Assessment (CA) refers to the marks scored during the semester through tests, assignments, practicals, quizzes, and other coursework activities set by the lecturer.\n\nTypical contribution structure:\n• CA (tests, assignments, practicals): 30% of your total score\n• Final Examination: 70% of your total score\n• Combined Total: 100%\n\nExample:\n• CA score: 24 out of 30 → 24 marks\n• Exam score: 49 out of 70 → 49 marks\n• Total score: 24 + 49 = 73 marks → Grade A\n\nNote: The exact CA-to-exam split may vary between courses and departments. Always confirm the assessment breakdown with your lecturer at the beginning of each semester."
@@ -1586,14 +1440,14 @@
   {
     "id": 89,
     "keywords": [
-      "what happens to ca if i fail exam",
-      "ca marks and exam failure",
-      "pass ca but fail exam",
-      "fail exam with good ca",
-      "ca score if course failed",
-      "ca and carryover",
-      "retake course ca marks",
-      "ca marks carryover course"
+      "ca marks carryover",
+      "ca marks fail exam",
+      "ca carryover course",
+      "keep ca marks retake",
+      "ca marks retained carryover",
+      "ca policy carryover fuoye",
+      "ca score if fail course",
+      "pass ca fail exam"
     ],
     "question": "If I fail a course and have to carry it over, do I keep my CA marks?",
     "answer": "This depends on your department's policy regarding carryover CA marks. In general:\n\n• Some departments allow students to carry over their CA marks from the original semester when retaking the course, meaning only the examination needs to be rewritten\n• Other departments require students to start the course completely from scratch, including repeating all CA activities\n\nYou must confirm the specific CA carryover policy with your department or academic adviser before assuming your previous CA marks will be retained. Do not make assumptions — the policy varies between departments and even between programmes within the same faculty."
@@ -1601,14 +1455,14 @@
   {
     "id": 90,
     "keywords": [
-      "what is academic probation",
       "academic probation meaning",
+      "what is academic probation",
+      "probation university meaning",
+      "probation student fuoye",
+      "academic probation definition",
       "define academic probation",
-      "probation university",
-      "on academic probation",
-      "academic probation explained",
-      "what does probation mean in university",
-      "probation student fuoye"
+      "probation explained fuoye",
+      "academic probation status"
     ],
     "question": "What is academic probation?",
     "answer": "Academic probation is a formal warning status given to a student whose academic performance has fallen below the minimum acceptable standard — specifically, a CGPA below 1.50.\n\nThere are two levels of probation at FUOYE:\n\n• Probation I: Issued after the first semester in which your CGPA falls below 1.50. This is a formal warning that your performance is unsatisfactory.\n\n• Probation II: Issued if your CGPA remains below 1.50 in the following semester. This comes with a more serious formal warning and places your continued enrolment at risk.\n\nIf your CGPA remains below 1.50 for a third consecutive semester, you will be required to withdraw from the university.\n\nIf you are placed on probation, seek immediate academic support from your adviser."
@@ -1616,13 +1470,14 @@
   {
     "id": 91,
     "keywords": [
-      "can i appeal probation",
-      "appeal academic probation",
+      "appeal probation decision",
+      "probation appeal fuoye",
+      "challenge probation fuoye",
+      "contest probation fuoye",
+      "probation review fuoye",
+      "appeal academic probation fuoye",
       "probation appeal process",
-      "challenge probation decision",
-      "academic probation review",
-      "fight probation fuoye",
-      "contest academic probation"
+      "fight probation fuoye"
     ],
     "question": "Can I appeal against an academic probation decision?",
     "answer": "Yes. Students who believe their academic probation status is based on incorrect results or extenuating circumstances may submit a formal appeal.\n\nSteps to appeal:\n1. Obtain an appeal form from the registry or student affairs office\n2. Write a formal letter explaining your circumstances and the grounds for your appeal\n3. Attach supporting documents — such as evidence of result errors, medical reports, or other relevant documentation\n4. Submit to your Head of Department, who will forward it to the appropriate academic board\n5. Await the board's decision, which is typically communicated within a few weeks\n\nAppeals based solely on personal dissatisfaction with the probation policy (rather than factual errors or documented extenuating circumstances) are unlikely to succeed."
@@ -1630,14 +1485,14 @@
   {
     "id": 92,
     "keywords": [
-      "how many times can i retake a course",
-      "retake limit",
-      "how many attempts per course",
-      "maximum retake carryover",
-      "can i retake more than once",
-      "repeat course multiple times",
-      "number of times to retake",
-      "retake course limit fuoye"
+      "retake limit course",
+      "how many retakes allowed",
+      "maximum retake course",
+      "retake course limit fuoye",
+      "attempts per course fuoye",
+      "repeat course limit",
+      "number times retake fuoye",
+      "retake course multiple times"
     ],
     "question": "How many times can I retake a failed course?",
     "answer": "The number of times a student may retake a failed course is limited and governed by departmental and university policy.\n\nGeneral guidelines:\n• Most programmes allow a student to retake a failed course a maximum of two to three times\n• After exhausting the permitted number of retakes for a course without passing, the student may face more serious academic consequences, including being required to withdraw from the programme\n• The exact retake limit varies by department, so consult your departmental handbook or academic adviser to confirm the specific rule for your programme\n\nThis is another reason why managing carryover courses seriously from the beginning is critically important."
@@ -1645,11 +1500,12 @@
   {
     "id": 93,
     "keywords": [
-      "difference between first semester and second semester registration",
-      "first semester registration",
-      "second semester registration",
-      "registration first vs second semester",
-      "semester registration difference",
+      "first second semester registration difference",
+      "registration difference semesters",
+      "first semester registration fuoye",
+      "second semester registration fuoye",
+      "registration first versus second",
+      "semester registration comparison",
       "which courses first semester",
       "which courses second semester"
     ],
@@ -1659,14 +1515,14 @@
   {
     "id": 94,
     "keywords": [
-      "what if i forget to register a course",
+      "forget register course",
       "missed course registration",
-      "did not register a course",
-      "forgot to add a course",
-      "missed registering a course",
-      "course not registered",
+      "forgot add course",
+      "missed registering course",
+      "course not registered fuoye",
       "registration missed course",
-      "forgot course during registration"
+      "forgot course during registration",
+      "did not register course"
     ],
     "question": "What happens if I forget to register a course?",
     "answer": "If you forget to register a course during the regular registration period, the following options may be available:\n\n• Course adjustment period: Within the first 6 weeks of lectures, you may still be able to add the missed course by completing the course change form at the Academic Affairs Office — subject to approval\n• After 6 weeks: Once the course adjustment window has closed, you will generally not be permitted to add the course for that semester\n• Consequence: If you do not register a course, you cannot sit for its examination and the course will not count toward your credits for that semester\n\nIt is critical to review your full course list carefully at the beginning of each semester and confirm your registration is complete before the deadline."
@@ -1674,18 +1530,15 @@
   {
     "id": 95,
     "keywords": [
-      "what is continuous assessment test",
-      "ca test meaning",
-      "when is ca test",
-      "continuous assessment test schedule",
-      "ca test period",
-      "when do ca tests hold",
-      "mid semester test",
-      "class test university",
-      "when are tests conducted",
-      "ca test fuoye",
-      "in class test fuoye",
-      "coursework test"
+      "ca test schedule",
+      "when ca test held",
+      "continuous assessment test timing",
+      "ca test period fuoye",
+      "mid semester test fuoye",
+      "class test timing fuoye",
+      "tests conducted semester",
+      "ca test fuoye timing",
+      "coursework test schedule"
     ],
     "question": "When are Continuous Assessment (CA) tests conducted?",
     "answer": "Continuous Assessment (CA) tests are conducted during the semester by individual lecturers at their own discretion. There is no single fixed date for all CA tests across all courses.\n\nKey things to know:\n• Each lecturer decides when their CA test will be held — it could be at any point during the semester, so always attend lectures regularly to avoid missing an unannounced test\n• CA tests are typically held during normal lecture hours in the classroom\n• Some lecturers may give advance notice while others may conduct surprise tests\n• Missing a CA test without a valid documented reason usually means scoring zero for that assessment\n• CA tests may include written tests, oral assessments, practicals, or assignments depending on the course\n\nThe best way to never miss a CA test is to attend all your lectures consistently throughout the semester."
@@ -1693,17 +1546,15 @@
   {
     "id": 96,
     "keywords": [
-      "what if i miss ca test",
-      "missed continuous assessment",
-      "absent for ca test",
-      "miss ca test",
-      "skip ca test",
-      "did not write ca",
-      "absent ca fuoye",
-      "ca test absence",
-      "missed class test",
-      "zero for missing ca",
-      "ca test missed what to do"
+      "miss ca test fuoye",
+      "absent ca test fuoye",
+      "missed ca test fuoye",
+      "skip ca test fuoye",
+      "did not write ca fuoye",
+      "ca test absence fuoye",
+      "missed class test fuoye",
+      "zero missing ca test",
+      "ca test missed steps"
     ],
     "question": "What happens if I miss a Continuous Assessment (CA) test?",
     "answer": "If you miss a Continuous Assessment test, the consequence depends entirely on the individual lecturer's policy for that course.\n\nPossible outcomes:\n• Zero mark: Most lecturers award a score of zero for any CA test missed without a valid reason — this directly reduces your CA score and ultimately your final grade\n• Make-up test: Some lecturers may offer a make-up test if you missed the assessment due to a genuine emergency and can provide supporting documentation (such as a medical report)\n• No make-up: Many lecturers do not offer make-up CA tests under any circumstances\n\nWhat you should do if you miss a CA test:\n1. Approach your lecturer as soon as possible after your absence\n2. Provide valid documentation to explain your absence\n3. Respectfully enquire whether a make-up opportunity is available\n4. Accept the lecturer's decision — it is ultimately at their discretion\n\nThe safest approach is to never miss a CA test by attending all your lectures throughout the semester."
@@ -1711,16 +1562,14 @@
   {
     "id": 97,
     "keywords": [
-      "what is a course unit load",
-      "full course load meaning",
-      "course load explained",
+      "typical course load fuoye",
       "normal course load semester",
-      "how many courses per semester",
-      "typical number of courses",
-      "average courses per semester",
-      "how many subjects per semester",
-      "recommended course load",
-      "standard course load fuoye"
+      "how many courses semester fuoye",
+      "average courses semester fuoye",
+      "how many subjects semester fuoye",
+      "recommended course load fuoye",
+      "standard course load fuoye",
+      "courses per semester fuoye"
     ],
     "question": "What is a typical course load per semester at FUOYE?",
     "answer": "A typical course load per semester at FUOYE falls between 15 and 24 credit units, which usually translates to approximately 5 to 8 courses depending on the unit weight of each course.\n\nBreakdown:\n• Minimum load: 15 units per semester (required to maintain full-time student status)\n• Maximum load: 24 units per semester (the upper limit permitted without special departmental approval)\n• Average load: Most students at 100 to 400 level register between 18 and 21 units per semester under normal circumstances\n\nStudents with carryover courses may have a higher total unit count since carryover courses are added on top of their current level courses. Always ensure your total registered units — including carryovers — do not exceed the 24-unit maximum limit."
@@ -1728,19 +1577,16 @@
   {
     "id": 98,
     "keywords": [
-      "what is a grade point",
       "what is grade point",
-      "what does grade point even mean",
       "grade point meaning",
-      "define grade point",
-      "what is gp",
-      "gp meaning university",
-      "grade point explained",
-      "what does grade point mean",
-      "gp value",
+      "gp meaning",
+      "gp definition",
       "grade point definition",
-      "gp in grading system",
-      "what is the term grade point"
+      "define grade point",
+      "grade point explained",
+      "gp grading system",
+      "what does gp mean",
+      "grade point value"
     ],
     "question": "What is a Grade Point (GP) and how does it work?",
     "answer": "A Grade Point (GP) is a numerical value assigned to each letter grade that represents the quality of your performance in a course. Grade Points are the foundation of the GPA and CGPA calculation system.\n\nHow Grade Points work:\n• Each course you take is awarded a letter grade (A, B, C, D, E, or F) based on your total score\n• That letter grade is then converted to a Grade Point value:\n  - A = 5 GP, B = 4 GP, C = 3 GP, D = 2 GP, E = 1 GP, F = 0 GP\n• The Grade Point is then multiplied by the number of units the course carries to produce the Total Credit Points (TCP) contribution for that course\n• The sum of all TCP contributions across all your courses in a semester gives you your semester TCP\n• GPA = TCP ÷ TLU\n\nIn simple terms: the higher your grade in each course, the more Grade Points you earn, and the higher your GPA and CGPA will be."
@@ -1748,16 +1594,14 @@
   {
     "id": 99,
     "keywords": [
-      "can i repeat a level",
       "repeat academic level",
-      "redo a year",
-      "repeat 100 level",
-      "repeat 200 level",
-      "can i stay back a level",
-      "academic level repetition",
-      "fail and repeat level",
-      "repeat entire year",
-      "redo academic year"
+      "redo academic year",
+      "repeat 100 level fuoye",
+      "repeat 200 level fuoye",
+      "stay back level fuoye",
+      "academic level repetition fuoye",
+      "fail repeat level fuoye",
+      "repeat entire year fuoye"
     ],
     "question": "Can I be made to repeat an entire academic level?",
     "answer": "Yes. In certain circumstances, a student may be required to repeat an entire academic level rather than simply carrying over individual failed courses.\n\nThis typically happens when:\n• A student has accumulated an excessive number of carryover units that make it impractical to progress to the next level\n• A student's CGPA has fallen below the minimum threshold after exhausting all probation opportunities\n• A student has failed a very high proportion of their registered courses in a given level\n• The department determines that the student lacks sufficient foundational knowledge to proceed\n\nRepeating a level means the student re-registers all courses for that level from the beginning, including courses previously passed. The specific conditions under which level repetition is imposed vary by department — consult your departmental handbook or academic adviser for the exact policy applicable to your programme."
@@ -1765,16 +1609,15 @@
   {
     "id": 100,
     "keywords": [
-      "what is a course exemption",
-      "course exemption meaning",
-      "exempt from a course",
-      "waiver for a course",
+      "course exemption fuoye",
+      "exempt course fuoye",
+      "waiver course fuoye",
       "course waiver university",
-      "exempted from course fuoye",
-      "skip a course with exemption",
-      "course exclusion",
-      "exemption from compulsory course",
-      "course exemption policy"
+      "exempted course fuoye",
+      "skip course exemption",
+      "course exclusion fuoye",
+      "exemption compulsory course fuoye",
+      "course exemption policy fuoye"
     ],
     "question": "What is a course exemption and how can I apply for one?",
     "answer": "A course exemption (also called a course waiver) is a formal permission granted to a student to skip a particular course — usually because the student can demonstrate that they have already covered equivalent content through prior learning, a professional qualification, or previous academic study.\n\nHow exemptions typically work:\n• The student submits a formal application to the Head of Department requesting exemption from a specific course\n• Supporting evidence must be provided — such as transcripts from a previous institution, professional certificates, or test results demonstrating prior knowledge\n• The department reviews the application and decides whether the exemption is warranted\n• If granted, the exempted course is excluded from the student's registration requirements — however, the student must confirm whether the exempted course's units still need to be replaced with an alternative course to meet the minimum graduation unit requirement\n\nCourse exemptions are not commonly granted and are decided entirely at the discretion of the department. Always seek your academic adviser's guidance before applying."
