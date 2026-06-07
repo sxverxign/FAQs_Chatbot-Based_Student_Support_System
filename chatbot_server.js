@@ -406,6 +406,7 @@ const SYNONYM_MAP = {
   'average'        : 'gpa',
   'semester average': 'gpa',
   'gpa'            : 'gpa',
+  'gp'            : 'gp',
 
   // --- CGPA specific routing ---
   'cumulative'     : 'cgpa',
@@ -500,88 +501,68 @@ function expandWithSynonyms(tokens) {
   return Array.from(expanded);
 }
 
+
 // ============================================================
-// NLP CORE — Score a single FAQ entry against user query tokens
-// Returns a score between 0 and 1
+// NLP CORE — REFINED Scoring Logic
+// This version prioritises exact phrase matches to prevent clashing.
 // ============================================================
 function scoreFAQEntry(faqEntry, queryTokens) {
   if (!faqEntry || !queryTokens.length) return 0;
 
-  // Combine the FAQ's keywords and question into one searchable text block
-  const faqKeywords  = faqEntry.keywords || [];
-  const faqQuestion  = preprocessText(faqEntry.question);
-  const faqAnswer    = preprocessText(faqEntry.answer);
+  const faqKeywords = faqEntry.keywords || [];
+  const faqQuestion = preprocessText(faqEntry.question);
+  
+  // Create a single string of keywords for phrase matching
+  const keywordString = faqKeywords.join(' ').toLowerCase();
+  // Create a single string of the user query
+  const queryPhrase = queryTokens.join(' ');
 
-  // Build a combined set of all FAQ words (keywords get higher weight)
-  const allFaqWords = [
-    ...faqKeywords,          // exact keywords — highest weight (×3)
-    ...faqQuestion,          // words from the FAQ question text — weight ×2
-    ...faqAnswer.slice(0, 20), // first 20 words from answer — weight ×1
-  ];
-
-  let matchCount    = 0;
   let weightedScore = 0;
 
+  // --- 1. PHRASE MATCHING (The "Anti-Clash" Secret) ---
+  // If the user's exact phrase (e.g., "grade point") exists in the FAQ keywords,
+  // we give it a massive boost so it beats partial matches elsewhere.
+  if (keywordString.includes(queryPhrase)) {
+    weightedScore += 20; 
+  }
+
+  // --- 2. INDIVIDUAL TOKEN MATCHING ---
   queryTokens.forEach(token => {
-    // Check keyword match (exact) — very strong signal
+    // Check for exact matches in keywords
     if (faqKeywords.includes(token)) {
+      weightedScore += 5; // Heavy weight for exact keyword
+    } 
+    // Check if token is part of a multi-word keyword
+    else if (faqKeywords.some(kw => kw.split(' ').includes(token))) {
       weightedScore += 3;
-      matchCount++;
-      return;
     }
-
-    // Check partial keyword match — moderate signal
-    if (faqKeywords.some(kw => kw.includes(token) || token.includes(kw))) {
-      weightedScore += 2;
-      matchCount++;
-      return;
-    }
-
-    // Check question text match — moderate signal
+    
+    // Check matches in the actual question text
     if (faqQuestion.includes(token)) {
       weightedScore += 2;
-      matchCount++;
-      return;
-    }
-
-    // Check answer text match — weak signal
-    if (faqAnswer.includes(token)) {
-      weightedScore += 1;
-      matchCount++;
     }
   });
 
-  if (matchCount === 0) return 0;
+  if (weightedScore === 0) return 0;
 
-  // Normalise: divide weighted score by maximum possible score
-  const maxPossibleScore = queryTokens.length * 3;
-  return weightedScore / maxPossibleScore;
+  // Normalise: higher score means higher confidence
+  // We divide by a fixed factor to keep scores between 0 and 1
+  return weightedScore / (queryTokens.length * 10 + 10);
 }
 
-// ============================================================
-// NLP CORE — Find the best matching FAQ for a given question
-// Returns { answer, confidence, question } or null
-// ============================================================
 function findBestFAQMatch(userQuestion, faqData) {
   if (!userQuestion || !faqData || !faqData.length) return null;
 
-  // Step 1: Preprocess and expand the user's query
-  const rawTokens   = preprocessText(userQuestion);
+  const rawTokens = preprocessText(userQuestion);
   const queryTokens = expandWithSynonyms(rawTokens);
-
-  console.log(`[NLP] Query tokens: [${queryTokens.join(', ')}]`);
 
   if (!queryTokens.length) return null;
 
-  // Step 2: Score every FAQ entry
   let bestMatch = null;
   let bestScore = 0;
 
   faqData.forEach(entry => {
     const score = scoreFAQEntry(entry, queryTokens);
-
-    // Log every entry score for debugging
-    console.log(`[NLP] FAQ #${entry.id} score: ${score.toFixed(3)} — "${entry.question}"`);
 
     if (score > bestScore) {
       bestScore = score;
@@ -589,17 +570,21 @@ function findBestFAQMatch(userQuestion, faqData) {
     }
   });
 
-  // Step 3: Only return a result if the score meets the minimum threshold
-  if (bestScore >= CONFIG.MATCH_THRESHOLD && bestMatch) {
-    console.log(`[NLP] Best match (score=${bestScore.toFixed(3)}): "${bestMatch.question}"`);
+  // LOG FOR DEBUGGING - Check your terminal to see why it matched
+  if (bestMatch) {
+    console.log(`[NLP] Best: "${bestMatch.question}" | Score: ${bestScore.toFixed(2)}`);
+  }
+
+  // THRESHOLD CHECK
+  // We use 0.25 now to be stricter
+  if (bestScore >= 0.25 && bestMatch) {
     return {
-      answer    : bestMatch.answer,
-      question  : bestMatch.question,
+      answer: bestMatch.answer,
+      question: bestMatch.question,
       confidence: Math.round(bestScore * 100),
     };
   }
 
-  console.log(`[NLP] No match above threshold (best score: ${bestScore.toFixed(3)})`);
   return null;
 }
 
