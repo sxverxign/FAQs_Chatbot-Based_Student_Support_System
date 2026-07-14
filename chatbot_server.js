@@ -1,6 +1,4 @@
 // This file creates the backend server using Node.js built-in modules only
-
-
 const http = require('http');       // Core HTTP server
 const fs   = require('fs');         // File system read/write
 const path = require('path');       // Safe file path building
