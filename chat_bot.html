@@ -13,9 +13,7 @@
 
 <body>
 
-  <!-- ============================================================
-       LOGIN SCREEN
-  ============================================================ -->
+  <!-- LOGIN SCREEN -->
   <div id="loginScreen" class="login-screen">
 
     <!-- Login card container -->
@@ -28,7 +26,7 @@
         <p class="login-subtitle">Student Support FAQs Chatbot</p>
       </div>
 
-      <!-- Login form — uses Fetch API, does NOT submit to server directly -->
+      <!-- Login form -->
       <form id="loginForm" class="login-form" autocomplete="off">
 
         <!-- Error message area -->
@@ -47,7 +45,6 @@
           <div class="password-wrapper">
             <input type="password" id="passwordInput" name="password" placeholder="Enter your password" required
               autocomplete="current-password" maxlength="100" />
-            <!-- Toggle password visibility button -->
             <button type="button" id="togglePassword" class="toggle-password" aria-label="Toggle password visibility">
               👁
             </button>
@@ -60,24 +57,21 @@
           <span id="loginSpinner" class="spinner hidden"></span>
         </button>
 
-        <!-- Demo credentials hint -->
         <p class="demo-hint">
           Demo: username <strong>student001</strong> / password <strong>pass1234</strong>
         </p>
 
       </form>
-    </div><!-- end login-card -->
+    </div>
 
-    <!-- Decorative background shapes -->
+
     <div class="login-bg-shape login-bg-shape-1"></div>
     <div class="login-bg-shape login-bg-shape-2"></div>
 
-  </div><!-- end loginScreen -->
+  </div>
 
 
-  <!-- ============================================================
-       MAIN CHAT APPLICATION
-  ============================================================ -->
+  <!-- MAIN CHAT APPLICATION -->
   <div id="chatApp" class="chat-app hidden">
 
     <!-- ---- SIDEBAR ----------------------------------------- -->
@@ -113,7 +107,7 @@
         </ul>
       </div>
 
-      <!-- Sidebar footer — user info & logout button -->
+      <!-- Sidebar footer i.e; user info & logout button -->
       <div class="sidebar-footer">
         <div class="user-info">
           <div class="user-avatar" id="userAvatar">S</div>
@@ -157,10 +151,10 @@
       </header>
 
 
-      <!-- Messages container — scrollable area -->
+
       <div class="messages-container" id="messagesContainer" role="log" aria-live="polite">
 
-        <!-- Welcome message — shown when no messages exist -->
+        <!-- Welcome message -->
         <div id="welcomeMessage" class="welcome-message">
           <div class="welcome-icon">
             <img src="assets/logo.png" alt="University Logo" class="sidebar-home" />
@@ -177,9 +171,6 @@
             <div class="example-questions">
               <button class="example-btn" data-question="How do I register my courses?">
                 How do I register my courses?
-              </button>
-              <button class="example-btn" data-question="How is GPA calculated?">
-                How is GPA calculated?
               </button>
               <button class="example-btn" data-question="What is the grading system?">
                 What is the grading system?
@@ -217,7 +208,7 @@
     <!-- Mobile sidebar overlay (clicking it closes the sidebar) -->
     <div id="sidebarOverlay" class="sidebar-overlay hidden"></div>
 
-  </div><!-- end chatApp -->
+  </div>
 
   <!-- Confirmation modal for destructive actions -->
   <div id="confirmModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
@@ -231,7 +222,6 @@
     </div>
   </div>
 
-  <!-- Link to our JavaScript file — placed at end of body for performance -->
 
 </body>
 

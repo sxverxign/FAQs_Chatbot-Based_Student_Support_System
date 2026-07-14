@@ -1,31 +1,14 @@
-/* ============================================================
-   chat_bot.js — Frontend Application Logic
-   Chatbot-Based Student Support System
-   ============================================================
-   This file controls the entire client-side behaviour:
-     - Login / logout flow
-     - Sending messages to the server
-     - Displaying messages and responses
-     - Managing chat history (save, load, delete)
-     - Sidebar toggle for mobile
-     - Auto-resizing textarea
-     - Confirmation modal
-
-   Architecture:
-     All state is kept in the `App` object.
-     Functions are grouped by feature area.
-   ============================================================ */
+/* THIS CONTROLS THE ENTIRE CLIENT-SIDE BEHAVIOUR */
 
 'use strict';
 
-// ============================================================
 // SERVER URL — change this if your server runs on a different port
-// ============================================================
+
 const SERVER_URL = window.location.origin;
 
-// ============================================================
+
 // APP STATE — single object holds all runtime state
-// ============================================================
+
 const App = {
   currentUser   : null,     // { username, fullName, department, level }
   currentChatId : null,     // unique ID string for the active chat session
@@ -35,10 +18,9 @@ const App = {
   confirmCallback: null,    // callback function for modal confirm button
 };
 
-// ============================================================
+
 // DOM ELEMENT REFERENCES
-// We grab all elements once at startup for performance
-// ============================================================
+
 const DOM = {
   // --- Login ---
   loginScreen    : document.getElementById('loginScreen'),
@@ -84,13 +66,10 @@ const DOM = {
   modalConfirmBtn: document.getElementById('modalConfirmBtn'),
 };
 
-// ============================================================
-// UTILITY FUNCTIONS
-// ============================================================
 
+// UTILITY FUNCTIONS
 /**
  * Generates a unique chat session ID based on timestamp + random number.
- * Example: "chat_1715000000000_4821"
  */
 function generateChatId() {
   return `chat_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
@@ -109,7 +88,6 @@ function formatTime(date) {
 
 /**
  * Formats a Date object to a short date string for sidebar.
- * Example: "Jan 5"
  */
 function formatShortDate(dateStr) {
   const date = new Date(dateStr);
@@ -166,9 +144,9 @@ function scrollToBottom() {
   container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
 }
 
-// ============================================================
+
 // MODAL — Confirmation Dialog
-// ============================================================
+
 
 /**
  * Shows the confirmation modal with a custom title, message, and callback.
@@ -204,9 +182,9 @@ DOM.confirmModal.addEventListener('click', (e) => {
   if (e.target === DOM.confirmModal) hideModal();
 });
 
-// ============================================================
+
 // LOGIN — Authentication
-// ============================================================
+
 
 /**
  * Shows an error message inside the login form.
@@ -315,9 +293,9 @@ DOM.togglePassword.addEventListener('click', () => {
   DOM.togglePassword.textContent = isPassword ? '🙈' : '👁';
 });
 
-// ============================================================
+
 // SESSION — Persist and restore login
-// ============================================================
+
 
 /**
  * Checks if a user session exists in localStorage.
@@ -373,9 +351,9 @@ function logout() {
 
 DOM.logoutBtn.addEventListener('click', logout);
 
-// ============================================================
+
 // CHAT UI — Initialise after successful login
-// ============================================================
+
 
 /**
  * Sets up the chat interface after a user logs in.
@@ -406,9 +384,9 @@ function initChatUI() {
   DOM.messageInput.focus();
 }
 
-// ============================================================
+
 // CHAT — Start a new chat session
-// ============================================================
+
 
 /**
  * Resets the chat area and begins a new empty conversation.
@@ -440,9 +418,9 @@ function startNewChat() {
 
 DOM.newChatBtn.addEventListener('click', startNewChat);
 
-// ============================================================
+
 // MESSAGES — Render message bubbles
-// ============================================================
+
 
 /**
  * Appends a message bubble to the chat area.
@@ -519,9 +497,9 @@ function removeTypingIndicator() {
   if (indicator) indicator.remove();
 }
 
-// ============================================================
+
 // MESSAGES — Send a question to the server
-// ============================================================
+
 
 /**
  * Sends the user's typed question to the server and displays the response.
@@ -609,9 +587,9 @@ async function sendMessage() {
   }
 }
 
-// ============================================================
+
 // SEND BUTTON — Input controls
-// ============================================================
+
 
 /**
  * Updates the send button enabled/disabled state based on input content.
@@ -649,9 +627,9 @@ function autoResizeTextarea() {
   el.style.height = el.scrollHeight + 'px'; // then expand to fit
 }
 
-// ============================================================
+
 // EXAMPLE BUTTONS — Clickable question chips in welcome message
-// ============================================================
+
 
 // Add click handlers for all example question buttons
 DOM.messagesContainer.addEventListener('click', (e) => {
@@ -668,9 +646,9 @@ DOM.messagesContainer.addEventListener('click', (e) => {
   }
 });
 
-// ============================================================
+
 // CHAT HISTORY — Save to server
-// ============================================================
+
 
 /**
  * Saves the current chat session to the server (chat_history.json).
@@ -705,9 +683,9 @@ async function saveChatHistory() {
   }
 }
 
-// ============================================================
+
 // CHAT HISTORY — Load from server (populate sidebar)
-// ============================================================
+
 
 /**
  * Fetches the user's chat history from the server and populates the sidebar.
@@ -798,9 +776,9 @@ function renderHistoryList(historyItems) {
   });
 }
 
-// ============================================================
+
 // CHAT HISTORY — Load a specific past chat
-// ============================================================
+
 
 /**
  * Loads a specific chat session from the server and displays it in the chat area.
@@ -854,9 +832,9 @@ async function loadChat(chatId) {
   }
 }
 
-// ============================================================
+
 // CHAT HISTORY — Delete operations
-// ============================================================
+
 
 /**
  * Deletes a single chat session.
@@ -945,9 +923,9 @@ function deleteCurrentChat() {
 DOM.deleteChatBtn.addEventListener('click', deleteCurrentChat);
 DOM.clearAllBtn.addEventListener('click', deleteAllChats);
 
-// ============================================================
+
 // SIDEBAR SEARCH — Filter history items
-// ============================================================
+
 
 DOM.historySearch.addEventListener('input', (e) => {
   const query = e.target.value.trim().toLowerCase();
@@ -967,9 +945,9 @@ DOM.historySearch.addEventListener('input', (e) => {
   renderHistoryList(filtered);
 });
 
-// ============================================================
+
 // SIDEBAR — Mobile toggle
-// ============================================================
+
 
 /** Opens the sidebar (mobile only). */
 function openSidebar() {
@@ -989,9 +967,9 @@ DOM.menuBtn.addEventListener('click', openSidebar);
 DOM.closeSidebarBtn.addEventListener('click', closeSidebar);
 DOM.sidebarOverlay.addEventListener('click', closeSidebar);
 
-// ============================================================
+
 // KEYBOARD SHORTCUTS
-// ============================================================
+
 
 document.addEventListener('keydown', (e) => {
   // Escape — close modal or sidebar
@@ -1009,9 +987,9 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ============================================================
+
 // WINDOW RESIZE — Handle sidebar state changes
-// ============================================================
+
 
 window.addEventListener('resize', () => {
   // If screen becomes large enough for sidebar, reset mobile state
@@ -1022,9 +1000,9 @@ window.addEventListener('resize', () => {
   }
 });
 
-// ============================================================
+
 // APP STARTUP
-// ============================================================
+
 
 /**
  * Entry point — called once when the page loads.

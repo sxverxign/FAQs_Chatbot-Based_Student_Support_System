@@ -1,31 +1,26 @@
 :root {
-  /* --- Primary brand colour (university colour) --- */
-  --primary        : #0b5d3a;       /* Main accent — buttons, highlights */
-  --primary-dark   : #063a24;       /* Darker shade for hover states    */
-  --primary-light  : #168c58;       /* Very light shade for backgrounds */
-
-  /* --- Secondary / accent colour --- */
-  --secondary      : #b45309;       /* Secondary highlights             */
-
-  /* --- Neutral colours --- */
-  --bg-main        : #f7f8fc;       /* Page background (main content)   */
-  --bg-sidebar     : #063a24;       /* Sidebar background               */
-  --bg-sidebar-hover: #fd9f57;      /* Sidebar item hover               */
-  --bg-card        : #ffffff;       /* Cards, panels                    */
-  --bg-input       : #f3f4f6;       /* Input field background           */
+  --primary        : #0b5d3a;
+  --primary-dark   : #063a24;
+  --primary-light  : #168c58;
+  --secondary      : #b45309;
+  --bg-main        : #f7f8fc; 
+  --bg-sidebar     : #063a24; 
+  --bg-sidebar-hover: #fd9f57;
+  --bg-card        : #ffffff; 
+  --bg-input       : #f3f4f6; 
 
   /* --- Text colours --- */
-  --text-primary   : #111827;       /* Main body text                   */
-  --text-secondary : #6b7280;       /* Muted/secondary text             */
-  --text-sidebar   : #f5f5f5;       /* Sidebar text                     */
-  --text-sidebar-muted: #d97706;    /* Muted sidebar text               */
-  --text-on-primary: #ffffff;       /* Text on primary-coloured buttons */
+  --text-primary   : #111827; 
+  --text-secondary : #6b7280; 
+  --text-sidebar   : #f5f5f5; 
+  --text-sidebar-muted: #d9770
+  --text-on-primary: #ffffff; 
 
   /* --- Message bubble colours --- */
-  --bubble-user    : #d97706;       /* User message background          */
-  --bubble-user-text: #ffffff;      /* User message text                */
-  --bubble-bot     : #ffffff;       /* Bot message background           */
-  --bubble-bot-text: #111827;       /* Bot message text                 */
+  --bubble-user    : #d97706; 
+  --bubble-user-text: #ffffff;
+  --bubble-bot     : #ffffff; 
+  --bubble-bot-text: #111827; 
   --bubble-shadow  : rgba(0,0,0,0.08);
 
   /* --- Status colours --- */
@@ -65,9 +60,7 @@
 }
 
 
-/* ============================================================
-   2. CSS RESET & BASE STYLES
-   ============================================================ */
+/* 2. CSS RESET & BASE STYLES */
 *,
 *::before,
 *::after {
@@ -78,7 +71,6 @@
 
 html {
   height: 100%;
-  /* Smooth scroll for anchor links */
   scroll-behavior: smooth;
 }
 
@@ -89,7 +81,7 @@ body {
   color       : var(--text-primary);
   background  : var(--bg-main);
   line-height : var(--line-height);
-  overflow    : hidden;            /* Prevent body scroll; inner divs scroll */
+  overflow    : hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -129,9 +121,7 @@ a:hover {
 }
 
 
-/* ============================================================
-   3. TYPOGRAPHY
-   ============================================================ */
+/* 3. TYPOGRAPHY */
 h1 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
 h2 { font-size: 1.3rem; font-weight: 600; }
 h3 { font-size: 1.1rem; font-weight: 600; }
@@ -143,9 +133,7 @@ p:last-child { margin-bottom: 0; }
 strong { font-weight: 600; }
 
 
-/* ============================================================
-   4. UTILITY CLASSES
-   ============================================================ */
+/* 4. UTILITY CLASSES */
 .hidden {
   display: none !important;
 }
@@ -200,9 +188,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   5a. LOGIN BACKGROUND
-   ============================================================ */
+/* 5a. LOGIN BACKGROUND */
 .login-screen {
   position       : relative;
   min-height     : 100vh;
@@ -240,9 +226,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   5b. LOGIN CARD
-   ============================================================ */
+/* 5b. LOGIN CARD */
 .login-card {
   position        : relative;
   z-index         : 1;
@@ -261,9 +245,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   5c. LOGIN FORM
-   ============================================================ */
+/* 5c. LOGIN FORM */
 .login-form {
   display       : flex;
   flex-direction: column;
@@ -379,9 +361,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   5d. LOGIN BRANDING
-   ============================================================ */
+/* 5d. LOGIN BRANDING */
 .login-branding {
   display        : flex;
   flex-direction : column;
@@ -415,14 +395,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   6. CHAT APPLICATION LAYOUT
-   ============================================================
-   Uses CSS Flexbox:
-     .chat-app = full-screen row container
-       .sidebar   = fixed-width left panel
-       .chat-main = flexible right content area
-   ============================================================ */
+/* 6. CHAT APPLICATION LAYOUT */
 .chat-app {
   display   : flex;
   height    : 100vh;
@@ -431,9 +404,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   7. SIDEBAR
-   ============================================================ */
+/* 7. SIDEBAR */
 .sidebar {
   width          : var(--sidebar-width);
   min-width      : var(--sidebar-width);
@@ -623,7 +594,7 @@ strong { font-weight: 600; }
   font-style: italic;
 }
 
-/* ---- 7d. Sidebar Footer ---- */
+/* 7d. Sidebar Footer */
 .sidebar-footer {
   display        : flex;
   align-items    : center;
@@ -696,9 +667,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   8. CHAT MAIN AREA
-   ============================================================ */
+/* 8. CHAT MAIN AREA */
 .chat-main {
   flex          : 1;
   display       : flex;
@@ -724,7 +693,7 @@ strong { font-weight: 600; }
 }
 
 .menu-btn {
-  display   : none;            /* shown on mobile via media query */
+  display   : none;
   background: none;
   color     : var(--text-secondary);
   font-size : 20px;
@@ -1042,9 +1011,7 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   9. CONFIRMATION MODAL
-   ============================================================ */
+/* 9. CONFIRMATION MODAL */
 .modal-backdrop {
   position       : fixed;
   inset          : 0;
@@ -1112,9 +1079,7 @@ strong { font-weight: 600; }
 .btn-modal-confirm:hover { background: #dc2626; }
 
 
-/* ============================================================
-   10. MOBILE OVERLAY (sidebar backdrop)
-   ============================================================ */
+/* 10. MOBILE OVERLAY (sidebar backdrop) */
 .sidebar-overlay {
   display   : none;
   position  : fixed;
@@ -1124,11 +1089,9 @@ strong { font-weight: 600; }
 }
 
 
-/* ============================================================
-   11. RESPONSIVE — TABLET & MOBILE
-   ============================================================ */
+/* 11. RESPONSIVE — TABLET & MOBILE */
 
-/* --- Tablet: <= 900px --- */
+/* Tablet */
 @media (max-width: 900px) {
   :root {
     --sidebar-width: 260px;
@@ -1143,7 +1106,7 @@ strong { font-weight: 600; }
   }
 }
 
-/* --- Mobile: <= 640px --- */
+/* Mobile */
 @media (max-width: 640px) {
   /* On mobile, sidebar is hidden off-screen by default */
   .sidebar {

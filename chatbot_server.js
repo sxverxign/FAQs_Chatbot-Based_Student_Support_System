@@ -1,24 +1,14 @@
-// ============================================================
-// chatbot_server.js — Node.js HTTP Server
-// Chatbot-Based Student Support System
-// ============================================================
-// This file creates the backend server using Node.js built-in
-// modules only. It handles:
-//   - User authentication
-//   - FAQ searching with keyword + intent matching
-//   - Chat history save, load, and delete
-//   - Static file serving (HTML, CSS, JS, assets)
-// ============================================================
+// This file creates the backend server using Node.js built-in modules only
 
-// ---- Built-in Node.js Modules (no npm install needed) ------
+
 const http = require('http');       // Core HTTP server
 const fs   = require('fs');         // File system read/write
 const path = require('path');       // Safe file path building
 const url  = require('url');        // URL parsing
 
-// ============================================================
-// CONFIGURATION — change these values to fit your setup
-// ============================================================
+
+// CONFIGURATION
+
 const CONFIG = {
   PORT           : process.env.PORT || 3000,
   HOST           : '0.0.0.0',
@@ -29,10 +19,10 @@ const CONFIG = {
   MATCH_THRESHOLD: 0.15,
 };
 
-// ============================================================
+
 // UTILITY — safe JSON file reader
 // Returns parsed data or a fallback value on failure
-// ============================================================
+
 function readJSONFile(filePath, fallback) {
   try {
     // Read file synchronously — simple and suitable for small JSON files
@@ -49,10 +39,10 @@ function readJSONFile(filePath, fallback) {
   }
 }
 
-// ============================================================
+
 // UTILITY — safe JSON file writer
 // Returns true on success, false on failure
-// ============================================================
+
 function writeJSONFile(filePath, data) {
   try {
     // Write with 2-space indentation so the file stays human-readable
@@ -64,13 +54,13 @@ function writeJSONFile(filePath, data) {
   }
 }
 
-// ============================================================
+
 // UTILITY — send a JSON response back to the client
-// ============================================================
+
 function sendJSON(res, statusCode, data) {
   res.writeHead(statusCode, {
     'Content-Type' : 'application/json',
-    // Allow requests from any origin (important for local development)
+    // Allow requests from any origin
     'Access-Control-Allow-Origin' : '*',
     'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
@@ -78,9 +68,9 @@ function sendJSON(res, statusCode, data) {
   res.end(JSON.stringify(data));
 }
 
-// ============================================================
+
 // UTILITY — serve a static file (HTML, CSS, JS, images, etc.)
-// ============================================================
+
 function serveStaticFile(res, filePath) {
   // Map file extensions to MIME types so the browser handles them correctly
   const mimeTypes = {
@@ -113,20 +103,10 @@ function serveStaticFile(res, filePath) {
   });
 }
 
-// ============================================================
+
 // GRATITUDE DETECTION — Phrases List
-// ============================================================
-// This list contains all the phrases and keywords that should
-// be recognised as expressions of gratitude or politeness.
-// When a student's message matches any of these, the chatbot
-// will respond with a warm acknowledgement instead of
-// searching the FAQ knowledge base.
-//
-// To add more phrases: simply add a new string to this array.
-// All comparisons are case-insensitive.
-// ============================================================
+
 const GRATITUDE_PHRASES = [
-  // Direct thank you variations
   'thank you',
   'thank you so much',
   'thank you very much',
@@ -142,8 +122,6 @@ const GRATITUDE_PHRASES = [
   'thank you for the response',
   'thank you for the update',
   'thank you for the assistance',
-
-  // Shortened thank you
   'thanks',
   'thanks a lot',
   'thanks so much',
@@ -163,8 +141,6 @@ const GRATITUDE_PHRASES = [
   'thanks a bunch',
   'thanks a ton',
   'many thanks',
-
-  // Informal / slang variations
   'thx',
   'thnx',
   'tnx',
@@ -174,8 +150,6 @@ const GRATITUDE_PHRASES = [
   'tq',
   'tq so much',
   'tq very much',
-
-  // Appreciative expressions
   'i appreciate it',
   'i appreciate that',
   'i appreciate your help',
@@ -197,8 +171,6 @@ const GRATITUDE_PHRASES = [
   'this was very helpful',
   'this is very helpful',
   'quite helpful',
-
-  // Acknowledgement expressions
   'noted',
   'got it',
   'got it thanks',
@@ -224,8 +196,6 @@ const GRATITUDE_PHRASES = [
   'awesome thank you',
   'brilliant thanks',
   'brilliant thank you',
-
-  // Complimentary expressions
   'you are helpful',
   'you are very helpful',
   'you have been helpful',
@@ -242,10 +212,7 @@ const GRATITUDE_PHRASES = [
   'well done',
   'keep it up',
   'nice one',
-
-  // Nigerian / informal expressions commonly used by students
   'e don do',
-  'na him be dat',
   'you don help me',
   'you don do am',
   'i don get am',
@@ -265,15 +232,8 @@ const GRATITUDE_PHRASES = [
   'that is quite clear',
 ];
 
-// ============================================================
+
 // GRATITUDE DETECTION — Response Pool
-// ============================================================
-// The chatbot randomly selects one response from this list
-// each time it detects a gratitude message.
-// This makes the chatbot feel more natural and less repetitive.
-//
-// To add more responses: add a new string to this array.
-// ============================================================
 const GRATITUDE_RESPONSES = [
   "You're welcome! 😊 If you have any other questions about your courses, grades, exams, or dress code, feel free to ask anytime.",
   "Happy to help! 🎓 Don't hesitate to ask if there's anything else you'd like to know.",
@@ -292,20 +252,9 @@ const GRATITUDE_RESPONSES = [
   "Happy to help! Academic success starts with being informed. 📚 Keep asking questions whenever you need to!",
 ];
 
-// ============================================================
+
 // GRATITUDE DETECTION — Main Function
-// ============================================================
-// Checks whether the user's message is a gratitude expression.
-// Returns true if it matches, false if it does not.
-//
-// How it works:
-//   1. Cleans the input (lowercase, remove punctuation, trim)
-//   2. Checks for an exact match against GRATITUDE_PHRASES
-//   3. Checks if the cleaned input STARTS WITH a gratitude phrase
-//      (handles cases like "thanks a lot for that explanation")
-//   4. Checks if the cleaned input CONTAINS a short gratitude
-//      keyword like "thanks" or "thank you"
-// ============================================================
+
 function isGratitude(userMessage) {
   if (!userMessage || typeof userMessage !== 'string') return false;
 
@@ -349,19 +298,19 @@ function isGratitude(userMessage) {
   return false;
 }
 
-// ============================================================
+
 // GRATITUDE DETECTION — Picks a Random Response
-// ============================================================
+
 
 function getGratitudeResponse() {
   const randomIndex = Math.floor(Math.random() * GRATITUDE_RESPONSES.length);
   return GRATITUDE_RESPONSES[randomIndex];
 }
 
-// ============================================================
+
 // NLP CORE — Text preprocessing
 // Cleans and tokenises a raw string for matching
-// ============================================================
+
 function preprocessText(text) {
   if (!text || typeof text !== 'string') return [];
 
@@ -381,18 +330,16 @@ function preprocessText(text) {
   ]);
 
   return text
-    .toLowerCase()                       // make everything lowercase
-    .replace(/[^a-z0-9\s]/g, ' ')        // remove punctuation
+    .toLowerCase()                       // makes everything lowercase
+    .replace(/[^a-z0-9\s]/g, ' ')        // removes punctuation
     .split(/\s+/)                         // split on whitespace
-    .filter(word => word.length > 1 && !stopWords.has(word));  // remove stop words
+    .filter(word => word.length > 1 && !stopWords.has(word));  // removes stop words
 }
 
-// ============================================================
-// NLP CORE — Synonym / intent expansion map
-// ============================================================
-const SYNONYM_MAP = {
 
-  // --- Registration routing ---
+// NLP CORE — Synonym / intent expansion map
+
+const SYNONYM_MAP = {
   'enroll'         : 'registration',
   'enrollment'     : 'registration',
   'signup'         : 'registration',
@@ -401,54 +348,35 @@ const SYNONYM_MAP = {
   'registered'     : 'registration',
   'portal'         : 'registration',
   'proceed'        : 'registration',
-
-  // --- GPA specific routing ---
   'average'        : 'gpa',
   'semester average': 'gpa',
   'gpa'            : 'gpa',
   'gp'            : 'gp',
-
-  // --- CGPA specific routing ---
   'cumulative'     : 'cgpa',
   'overall'        : 'cgpa',
   'cgpa'           : 'cgpa',
 
-  // --- TLU specific routing ---
   'tlu'            : 'tlu',
   'load units'     : 'tlu',
-
-  // --- CLU specific routing ---
   'clu'            : 'clu',
   'cumulative load': 'clu',
-
-  // --- TCP specific routing ---
   'tcp'            : 'tcp',
   'credit points'  : 'tcp',
-
-  // --- CCP specific routing ---
   'ccp'            : 'ccp',
   'cumulative credit': 'ccp',
-
-  // --- Grade point specific routing ---
   'gp'             : 'grade point',
   'grade points'   : 'grade point',
   'point value'    : 'grade point',
-
-  // --- Grading system routing ---
   'marks'          : 'grading',
   'score'          : 'grading',
   'scores'         : 'grading',
   'percentage'     : 'grading',
-
-  // --- Carryover routing ---
   'carryover'      : 'carryover',
   'carry'          : 'carryover',
   'retake'         : 'carryover',
   'repeat'         : 'carryover',
   'failed'         : 'carryover',
   'fail'           : 'carryover',
-
-  // --- Dress code routing ---
   'wear'           : 'dress',
   'wearing'        : 'dress',
   'outfit'         : 'dress',
@@ -457,28 +385,20 @@ const SYNONYM_MAP = {
   'attire'         : 'dress',
   'dressed'        : 'dress',
   'dressing'       : 'dress',
-
-  // --- Exam routing ---
   'exam'           : 'examination',
   'exams'          : 'examination',
   'test'           : 'examination',
   'paper'          : 'examination',
   'finals'         : 'examination',
   'examination'    : 'examination',
-
-  // --- Probation routing ---
   'probation'      : 'probation',
   'warning'        : 'probation',
   'dismissed'      : 'probation',
   'withdrawal'     : 'probation',
-
-  // --- CA routing ---
   'ca'             : 'continuous assessment',
   'coursework'     : 'continuous assessment',
   'assignment'     : 'continuous assessment',
   'quiz'           : 'continuous assessment',
-
-  // --- Footwear routing ---
   'slippers'       : 'slippers',
   'flip'           : 'slippers',
   'sandals'        : 'slippers',
@@ -486,9 +406,8 @@ const SYNONYM_MAP = {
   'shoes'          : 'slippers',
 };
 
-// ============================================================
+
 // NLP CORE — Expand tokens using synonym map
-// ============================================================
 function expandWithSynonyms(tokens) {
   const expanded = new Set(tokens);
 
@@ -502,10 +421,10 @@ function expandWithSynonyms(tokens) {
 }
 
 
-// ============================================================
+
 // NLP CORE — REFINED Scoring Logic
-// This version prioritises exact phrase matches to prevent clashing.
-// ============================================================
+// Prioritises exact phrase matches to prevent clashing.
+
 function scoreFAQEntry(faqEntry, queryTokens) {
   if (!faqEntry || !queryTokens.length) return 0;
 
@@ -520,8 +439,6 @@ function scoreFAQEntry(faqEntry, queryTokens) {
   let weightedScore = 0;
 
   // --- 1. PHRASE MATCHING (The "Anti-Clash" Secret) ---
-  // If the user's exact phrase (e.g., "grade point") exists in the FAQ keywords,
-  // we give it a massive boost so it beats partial matches elsewhere.
   if (keywordString.includes(queryPhrase)) {
     weightedScore += 20; 
   }
@@ -530,7 +447,7 @@ function scoreFAQEntry(faqEntry, queryTokens) {
   queryTokens.forEach(token => {
     // Check for exact matches in keywords
     if (faqKeywords.includes(token)) {
-      weightedScore += 5; // Heavy weight for exact keyword
+      weightedScore += 5;
     } 
     // Check if token is part of a multi-word keyword
     else if (faqKeywords.some(kw => kw.split(' ').includes(token))) {
@@ -545,8 +462,6 @@ function scoreFAQEntry(faqEntry, queryTokens) {
 
   if (weightedScore === 0) return 0;
 
-  // Normalise: higher score means higher confidence
-  // We divide by a fixed factor to keep scores between 0 and 1
   return weightedScore / (queryTokens.length * 10 + 10);
 }
 
@@ -588,10 +503,10 @@ function findBestFAQMatch(userQuestion, faqData) {
   return null;
 }
 
-// ============================================================
+
 // ROUTE HANDLER — POST /api/login
 // Authenticates a student against users.json
-// ============================================================
+
 function handleLogin(req, res, body) {
   let data;
 
@@ -612,11 +527,11 @@ function handleLogin(req, res, body) {
     });
   }
 
-  // Sanitise inputs — trim whitespace, convert username to lowercase
+
   const cleanUsername = String(username).trim().toLowerCase();
   const cleanPassword = String(password).trim();
 
-  // Load users from JSON file
+  // Loads users from JSON file
   const users = readJSONFile(CONFIG.USERS_FILE, []);
 
   if (!users.length) {
@@ -634,7 +549,6 @@ function handleLogin(req, res, body) {
   );
 
   if (matchedUser) {
-    // Login successful — return user info (never return the password)
     console.log(`[AUTH] Login successful: ${matchedUser.username}`);
     sendJSON(res, 200, {
       success   : true,
@@ -656,10 +570,10 @@ function handleLogin(req, res, body) {
   }
 }
 
-// ============================================================
+
 // ROUTE HANDLER — POST /api/chat
 // Receives a question, searches FAQ, returns an answer
-// ============================================================
+
 function handleChat(req, res, body) {
   let data;
 
@@ -684,7 +598,7 @@ function handleChat(req, res, body) {
 
    const cleanQuestion = question.trim();
 
-  // Guard against very long inputs (spam protection)
+  // Guard against very long inputs
   if (cleanQuestion.length > 500) {
     return sendJSON(res, 400, {
       success: false,
@@ -697,7 +611,6 @@ function handleChat(req, res, body) {
   // ---- Gratitude Detection --------------------------------
   // Checks if the student is expressing gratitude before
   // running the FAQ search.
-  // --------------------------------------------------------
   if (isGratitude(cleanQuestion)) {
     console.log(`[CHAT] Gratitude detected — sending acknowledgement response`);
     return sendJSON(res, 200, {
@@ -742,10 +655,10 @@ function handleChat(req, res, body) {
   }
 }
 
-// ============================================================
+
 // ROUTE HANDLER — POST /api/history/save
 // Saves a new chat conversation to chat_history.json
-// ============================================================
+
 function handleSaveHistory(req, res, body) {
   let data;
 
@@ -797,10 +710,10 @@ function handleSaveHistory(req, res, body) {
   }
 }
 
-// ============================================================
+
 // ROUTE HANDLER — GET /api/history?username=...
 // Returns all chat sessions for a specific user
-// ============================================================
+
 function handleGetHistory(req, res, parsedUrl) {
   const username = parsedUrl.query.username;
 
@@ -827,10 +740,10 @@ function handleGetHistory(req, res, parsedUrl) {
   sendJSON(res, 200, { success: true, history: summary });
 }
 
-// ============================================================
+
 // ROUTE HANDLER — GET /api/history/:chatId?username=...
 // Returns the full messages of a specific chat session
-// ============================================================
+
 function handleGetChatById(req, res, chatId, parsedUrl) {
   const username = parsedUrl.query.username;
 
@@ -851,10 +764,10 @@ function handleGetChatById(req, res, chatId, parsedUrl) {
   }
 }
 
-// ============================================================
+
 // ROUTE HANDLER — DELETE /api/history/:chatId?username=...
 // Deletes a specific chat session
-// ============================================================
+
 function handleDeleteChat(req, res, chatId, parsedUrl) {
   const username = parsedUrl.query.username;
 
@@ -882,10 +795,10 @@ function handleDeleteChat(req, res, chatId, parsedUrl) {
   }
 }
 
-// ============================================================
+
 // ROUTE HANDLER — DELETE /api/history/all?username=...
 // Deletes all chat sessions for a user
-// ============================================================
+
 function handleDeleteAllChats(req, res, parsedUrl) {
   const username = parsedUrl.query.username;
 
@@ -905,9 +818,9 @@ function handleDeleteAllChats(req, res, parsedUrl) {
   }
 }
 
-// ============================================================
+
 // COLLECT REQUEST BODY — reads POST body chunks
-// ============================================================
+
 function collectBody(req, callback) {
   let body = '';
 
@@ -925,10 +838,10 @@ function collectBody(req, callback) {
   req.on('error', () => callback(''));
 }
 
-// ============================================================
+
 // MAIN HTTP SERVER
 // Routes every incoming request to the correct handler
-// ============================================================
+
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);   // parse URL + query string
   const pathname  = parsedUrl.pathname;
@@ -1016,9 +929,9 @@ const server = http.createServer((req, res) => {
   serveStaticFile(res, safePath);
 });
 
-// ============================================================
+
 // START SERVER
-// ============================================================
+
 server.listen(CONFIG.PORT, CONFIG.HOST, () => {
   console.log('');
   console.log('╔══════════════════════════════════════════════════╗');
