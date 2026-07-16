@@ -180,6 +180,8 @@ const GRATITUDE_PHRASES = [
   'alright thank you',
   'okay thanks',
   'okay thank you',
+  'okay',
+  'ok',
   'ok thanks',
   'ok thank you',
   'perfect thanks',
